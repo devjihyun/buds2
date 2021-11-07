@@ -1,0 +1,39 @@
+{
+  "name": "buds2",
+  "version": "1.0.0",
+  "description": "buds2 knotted promotion test",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devjihyun/buds2.git"
+  },
+  "author": "sonia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devjihyun/buds2/issues"
+  },
+  "homepage": "https://github.com/devjihyun/buds2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/register": "^7.16.0",
+    "babelify": "^10.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-bro": "^2.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-image": "^6.2.1",
+    "gulp-webserver": "^0.9.1",
+    "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "gift": "^0.10.2"
+  }
+}
