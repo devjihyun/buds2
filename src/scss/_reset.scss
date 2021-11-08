@@ -1,48 +1,27 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+@charset "UTF-8";
+*{-webkit-text-size-adjust:none}
+body, html {height:100%;}
+body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select{margin:0;padding:0; font-weight:normal;}
+body{font-size:14px; font-family:'SamsungIFRg', 'Microsoft YaHei', AppleGothic, sans-serif;}
+li{list-style:none}
+a{text-decoration:none}
+a[href^="tel"]{font-style:normal}
+address, caption, em, var{font-style:normal;font-weight:normal}
+input, textarea, select{letter-spacing:normal;}
+ol, ul, dl{list-style:none}
+fieldset, img{border:0}
+legend, caption{display:none}
+img{border:0;vertical-align:top}
+hr{display:none}
+table{border-collapse:collapse;border-spacing:0}
+br{letter-spacing:normal}
+p{letter-spacing:normal}
+input{vertical-align:middle}
+input[type="text"], input[type="password"], input[type="time"],input[type="date"],input[type="email"],input[type="tel"],input[type="number"],
+input[type="search"] {width:100%; vertical-align:middle; height:36px; font-size:15px; padding:0 10px; color:#505562; box-sizing:border-box; border:1px solid #bfc7ce; border-radius:3px;
+-webkit-appearance:none; background:#f7fbff;}
+input[type="checkbox"] {vertical-align:middle; -webkit-border-radius:0;}
+input[type="radio"] {vertical-align:middle;}
+button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]{-webkit-appearance:button;border-radius:0}
+textarea {width:100%; padding:10px; line-height:24px; box-sizing:border-box; resize:none; border:1px solid #bfc7ce; border-radius:2px; -webkit-appearance:none;}
+select {vertical-align:middle; -webkit-appearance:none; min-width:150px; padding:0 42px 0 7px; color:#505562; font-size:15px; line-height:32px; border:1px solid #bfc7ce; border-radius:2px;}

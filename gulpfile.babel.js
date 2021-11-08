@@ -7,10 +7,14 @@ import miniCSS from "gulp-csso";
 import bro from "gulp-bro";
 import babelify from "babelify";
 import ghPages from "gulp-gh-pages";
+import include from "gulp-file-include";
 
 const routes = {
     html: {
-        src: "src/*.html", // 컴파일할 파일 경로
+        src: ([
+            "src/html/*",
+            "!" + "./src/html/include"
+        ]),
         dest: "build"
     },
     img: {
@@ -34,6 +38,10 @@ const sass = require("gulp-sass")(require("node-sass"));
 const html = () => 
     gulp
         .src(routes.html.src)
+        .pipe(include({
+            prefix: "@@",
+            basepath: "@file"
+        }))
         .pipe(gulp.dest(routes.html.dest));
 
 const clean = () => del(["build/", ".publish"]);
