@@ -42,7 +42,7 @@ const html = () =>
             prefix: "@@",
             basepath: "@file"
         }))
-        .pipe(gulp.dest(routes.html.dest));
+        .pipe(gulp.dest(routes.html.dest))
 
 const clean = () => del(["build/", ".publish"]);
 
