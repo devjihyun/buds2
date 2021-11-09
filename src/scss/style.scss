@@ -1,7 +1,26 @@
 @import "_reset";
-@import "_variables";
+@import "_mixin";
+@import "_px-conversion";
+@import "_vw-conversion";
 
-
-.test {
-    display: flex;
+/* layout */
+#wrap{
+    max-width: 1920px;
 }
+
+.header{
+    height: 90px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+// .sec-section-content {
+//     max-width: 1440px;margin: 0 auto;
+    
+//     .a {@include vw-pc(padding, 20);@include vw-pc(font-size, 32);border-radius: 10px;box-sizing: border-box;}
+//     .b {@include vw-pc(margin, 10);}
+//     .e {width: 100%;@include vw-pc(height,500);@include vw-pc(margin-top,20);border:3px solid #504610;background: url(../../is/images/cover-img.jpg) no-repeat 50% 0;background-size: contain;box-sizing:border-box;text-align: right;}
+// }
+// @media screen and (max-width: 768px) {
+
+// }
