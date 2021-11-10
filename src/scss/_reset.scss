@@ -1,8 +1,7 @@
-@charset "UTF-8";
 *{-webkit-text-size-adjust:none}
 body, html {height:100%;}
 body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select{margin:0;padding:0; font-weight:normal;}
-body{font-size:14px; font-family:'SamsungIFRg', 'Microsoft YaHei', AppleGothic, sans-serif;}
+body{font-size:14px; font-family:'Samsung Sharp Sans', Dotum, '돋움', sans-serif}
 li{list-style:none}
 a{text-decoration:none}
 a[href^="tel"]{font-style:normal}
@@ -25,50 +24,3 @@ input[type="radio"] {vertical-align:middle;}
 button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]{-webkit-appearance:button;border-radius:0}
 textarea {width:100%; padding:10px; line-height:24px; box-sizing:border-box; resize:none; border:1px solid #bfc7ce; border-radius:2px; -webkit-appearance:none;}
 select {vertical-align:middle; -webkit-appearance:none; min-width:150px; padding:0 42px 0 7px; color:#505562; font-size:15px; line-height:32px; border:1px solid #bfc7ce; border-radius:2px;}
-
-/* common */
-.blind {
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-}
-
-.blind-inline {
-    display: inline-block;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-}
-
-.skip-nav {
-    position: relative;
-    width: 100%;
-
-    a {
-        position: absolute;
-        top: -31px;
-        left: 0;
-        height: 30px;
-        padding: 0 20px 0 26px;
-        font-size: 12px;
-        line-height: 30px;
-        background-color: #000;
-        color: #fff;
-        text-align: center;
-
-        &:focus {
-            overflow: hidden;
-            top: 0;
-        }
-    }
-}

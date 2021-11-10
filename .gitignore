@@ -4,4 +4,6 @@
 #next.js build output
 .next
 build/
+
+#node_modules
 node_modules

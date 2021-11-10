@@ -1,35 +1,163 @@
+@charset "utf-8";
+
 @import "_reset";
+@import "font";
 @import "_mixin";
 @import "_px-conversion";
 @import "_vw-conversion";
 
-/* layout */
-.warp-main {
-    max-width: 1920px;
+/* common */
+.visually-hidden {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); 
+    white-space: nowrap;
 }
 
-.header-main {
+.skip-nav {
+    position: relative;
+    width: 100%;
+
+    a {
+        position: absolute;
+        top: -31px;
+        left: 0;
+        z-index: 9999;
+        height: 30px;
+        padding: 0 20px 0 26px;
+        font-size: 12px;
+        line-height: 30px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+
+        &:focus {
+            overflow: hidden;
+            top: 0;
+        }
+    }
+}
+
+/* layout */
+// 아이디 클래스로 바꾸기
+#header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     width: 100%;
     height: 90px;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: #fff;
+    text-align: right;
 }
 
-.container-prm {
+#main {
     padding-top: 90px;
 }
 
-// .sec-section-content {
-//     max-width: 1440px;margin: 0 auto;
-    
-//     .a {@include vw-pc(padding, 20);@include vw-pc(font-size, 32);border-radius: 10px;box-sizing: border-box;}
-//     .b {@include vw-pc(margin, 10);}
-//     .e {width: 100%;@include vw-pc(height,500);@include vw-pc(margin-top,20);border:3px solid #504610;background: url(../../is/images/cover-img.jpg) no-repeat 50% 0;background-size: contain;box-sizing:border-box;text-align: right;}
-// }
-// @media screen and (max-width: 768px) {
+.container-prm {
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+}
 
-// }
+/**/
+.section-prm {
+    .section-tit {
+        font-weight: bold;
+        @include vw-wide-pc(font-size, 56);
+    }
+}
+
+.section-kv {
+    background-image: url("../images/bg-kv-pc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include vw-wide-pc(height, 750);
+
+    .area-tit {
+        padding: 14.94792vw 0 0 15.10417vw;
+        font-weight: bold;
+    }
+    
+    .txt-info {
+        display: block;
+        @include vw-wide-pc(margin-top, 20);
+    }
+
+    .info-summary {
+        display: block;
+        font-weight: 400;
+        @include vw-wide-pc(font-size, 20);
+        @include vw-wide-pc(line-height, 26);
+    }
+
+    .info-date {
+        display: block;
+        @include vw-wide-pc(margin-top, 20);
+        font-weight: bold;
+        @include vw-wide-pc(font-size, 20);
+    }
+}
+
+.section-buy {
+    background-image: url("../images/bg-buy.jpg");
+
+    .area-tit {
+        @include vw-wide-pc(padding-top, 120);
+    }
+
+    .section-tit {
+        text-align: center;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    /* layout */
+    #header {
+        height: 44px;
+    }
+    
+    #main {
+        padding-top: 44px;
+    }
+
+    .section-prm {
+        .section-tit {
+            @include vw-mo(font-size, 68);
+        }
+    }
+    
+    .section-kv {
+        @include vw-mo(height, 1180);
+        background-image: url("../images/bg-kv-mo.jpg");
+
+        .area-tit {
+            padding: 23.88889vw 0 0;
+            text-align: center;
+        }
+
+        .txt-info {
+            @include vw-mo(margin-top, 20);
+        }
+    
+        .info-summary {
+            @include vw-mo(font-size, 30);
+            @include vw-mo(line-height, 42);
+        }
+    
+        .info-date {
+            @include vw-mo(margin-top, 20);
+            @include vw-mo(font-size, 30);
+        }
+    }
+
+}

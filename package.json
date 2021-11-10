@@ -25,14 +25,15 @@
     "babelify": "^10.0.0",
     "del": "^6.0.0",
     "gift": "^0.10.2",
-    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-bro": "^2.0.0",
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-image": "^6.2.1",
+    "gulp-sass": "^5.0.0",
     "gulp-webserver": "^0.9.1",
+    "node-sass": "^6.0.1",
     "uglifyify": "^5.0.2"
   }
 }
