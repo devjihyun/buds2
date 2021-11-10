@@ -12,23 +12,19 @@
 </head>
 
 <body>
-    <div id="skip">
+    <div id="skip" class="skip-nav">
         <a href="#container">본문 바로가기</a>
     </div>
 
-    <div id="wrap">
+    <div id="wrap" class="warp-main">
 
         <!-- header -->
-        @@include('./include/header.html')
+        <header id="header" class="header-main">상단 GNB 영역</header>
         <!--//header -->
 
         <!-- contents -->
         @@include('./include/container.html')
         <!--//contents -->
-
-        <!-- footer -->
-        @@include('./include/footer.html')
-        <!--//footer -->
     </div>
 
 </body>
