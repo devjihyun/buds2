@@ -1,7 +1,7 @@
 @charset "utf-8";
 
+@import "_font";
 @import "_reset";
-@import "font";
 @import "_mixin";
 @import "_px-conversion";
 @import "_vw-conversion";
@@ -76,7 +76,7 @@
 }
 
 .section-kv {
-    background-image: url("../images/bg-kv-pc.jpg");
+    background-image: url("../images/common/bg/bg_kv_pc.gif");
     background-repeat: no-repeat;
     background-size: cover;
     @include vw-wide-pc(height, 750);
@@ -107,7 +107,7 @@
 }
 
 .section-buy {
-    background-image: url("../images/bg-buy.jpg");
+    background-image: url("../images/common/bg/bg_buy.jpg");
 
     .area-tit {
         @include vw-wide-pc(padding-top, 120);
@@ -115,6 +115,45 @@
 
     .section-tit {
         text-align: center;
+    }
+
+    .area-cont {
+        @include clearfix;
+        padding: 0 7.8125vw;
+        position: relative;
+
+        .box-tit {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .box-cont {
+            float: left;
+        }
+    }
+
+    .box-slide {
+        @include vw-wide-pc(width, 740);
+        @include vw-wide-pc(height, 740);
+        border: 1.04167vw solid #fff;
+        background-color: #f5f2f7;
+        box-sizing: border-box;
+    }
+
+    .box-buy {
+        @include vw-wide-pc(width, 466);
+        @include vw-wide-pc(margin-left, 93);
+    }
+
+    .box-option {
+        @include clearfix;
+
+        .item-option {
+            float: left;
+            width: 50%;
+            background-color: #fff;
+        }
     }
 }
 
@@ -138,7 +177,7 @@
     
     .section-kv {
         @include vw-mo(height, 1180);
-        background-image: url("../images/bg-kv-mo.jpg");
+        background-image: url("../images/common/bg/bg_kv_mo.gif");
 
         .area-tit {
             padding: 23.88889vw 0 0;

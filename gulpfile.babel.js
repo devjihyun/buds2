@@ -18,8 +18,12 @@ const routes = {
         dest: "build"
     },
     img: {
-        src: "src/images/*",
+        src: "src/images/**/*",
         dest: "build/images"
+    },
+    font: {
+        src: "src/font/*",
+        dest: "build/font"
     },
     scss: {
         watch: "src/scss/**/*.scss",
@@ -57,6 +61,11 @@ const img = () =>
         .pipe(image())
         .pipe(gulp.dest(routes.img.dest));
 
+const font = () => 
+    gulp
+        .src(routes.font.src)
+        .pipe(gulp.dest(routes.font.dest));
+
 const styles = () =>
     gulp
         .src(routes.scss.src)
@@ -86,11 +95,12 @@ const gh = () => gulp.src("build/**/*").pipe(ghPages());
 const watch = () => {
     gulp.watch(routes.html.src, html);
     gulp.watch(routes.img.src, img);
+    gulp.watch(routes.font.src, font);
     gulp.watch(routes.scss.watch, styles);
     gulp.watch(routes.js.watch, js);
 };
 
-const prepare = gulp.series([clean, img]);
+const prepare = gulp.series([clean, img, font]);
 
 const assets = gulp.series([html, styles, js]);
 

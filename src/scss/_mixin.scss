@@ -7,17 +7,3 @@
         clear: both;
     }
 }
-
-@mixin blind($display : block) {
-    @if $display == inline {
-        display: inline-block;
-    }
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-}
