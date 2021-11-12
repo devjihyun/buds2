@@ -20,6 +20,17 @@
     white-space: nowrap;
 }
 
+.txt-comm {
+    display: block;
+}
+
+.box-img {
+    display: block;
+}
+
+
+/* layout */
+// 아이디 클래스로 바꾸기
 .skip-nav {
     position: relative;
     width: 100%;
@@ -44,8 +55,6 @@
     }
 }
 
-/* layout */
-// 아이디 클래스로 바꾸기
 #header {
     position: fixed;
     top: 0;
@@ -62,105 +71,119 @@
 }
 
 .container-prm {
-    max-width: 1920px;
     min-width: 320px;
-    margin: 0 auto;
 }
 
 /**/
-.section-prm {
-    .tit-section {
+
+.section-comm {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .inner-section {
+        max-width: 1440px;
+        margin: 0 auto;
+        @include vw-pc(padding-top, 120);
+    }
+
+    .section-tit {
         font-weight: bold;
-        @include vw-wide-pc(font-size, 56);
+        @include vw-pc(font-size, 56);
         line-height: 1.3;
     }
 }
 
 .section-kv {
-    background-image: url("../images/common/bg/bg_kv_pc.gif");
+    background-image: url("../images/bg/bg_kv_pc.gif");
     background-repeat: no-repeat;
     background-size: cover;
     @include vw-wide-pc(height, 750);
 
-    .area-tit {
+    .inner-section {
+        max-width: 1920px;
         padding: 14.94792vw 0 0 15.10417vw;
+    }
+
+    .area-section-tit {
         font-weight: bold;
+    }
+
+    .section-tit {
+        @include vw-wide-pc(font-size, 56);
     }
     
-    .txt-info {
+    .box-txt {
         display: block;
         @include vw-wide-pc(margin-top, 20);
-    }
 
-    .info-summary {
-        display: block;
-        font-weight: 400;
-        @include vw-wide-pc(font-size, 20);
-        line-height: 1.3;
-    }
+        .txt-summary {
+            display: block;
+            font-weight: 400;
+            @include vw-wide-pc(font-size, 20);
+            line-height: 1.3;
+        }
 
-    .info-date {
-        display: block;
-        @include vw-wide-pc(margin-top, 20);
-        font-weight: bold;
-        @include vw-wide-pc(font-size, 20);
-        line-height: 1.4;
-    }
+        .txt-date {
+            display: block;
+            @include vw-wide-pc(margin-top, 20);
+            font-weight: bold;
+            @include vw-wide-pc(font-size, 20);
+            line-height: 1.4;
+        }
+    }    
 }
 
 .section-buy {
-    background-image: url("../images/common/bg/bg_buy.gif");
+    background-image: url("../images/bg/bg_buy.gif");
 
-    .area-tit {
-        @include vw-wide-pc(padding-top, 120);
+    .inner-section {
+        padding: 8.33333vw 0 6.52778vw;
+    }
 
-        .tit-section {
+    .area-section-tit {
+
+        .section-tit {
             line-height: 1.1;
             text-align: center;
         }
     }
 
-    .area-cont {
+    .area-section-cont {
         display: flex;
         position: relative;
+        @include vw-pc(padding-top, 70);
         flex-direction: row-reverse;
         justify-content: center;
-
-
-
-        .box-option {
-            
-        }
     }
 
     .box-buy {
-        @include vw-wide-pc(width, 466);
-        @include vw-wide-pc(margin-left, 93);
+        @include vw-pc(width, 466);
+        @include vw-pc(margin-left, 93);
 
-        .box-tit {
-            .tit-sub {
+        .box-cont-tit {
+            .cont-tit {
                 font-weight: bold;
-                @include vw-wide-pc(font-size, 44);
+                @include vw-pc(font-size, 44);
                 line-height: 1.5;
             }
 
             .txt-model {
-                @include vw-wide-pc(font-size, 16);
+                @include vw-pc(font-size, 16);
             }
         }
 
-        .box-option {
+        .box-buy-option {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
     
-            .item-option {
+            .box-item {
                 position: relative;
-                @include vw-wide-pc(width, 225);
-                @include vw-wide-pc(height, 100);
-                @include vw-wide-pc(margin-top, 15);
+                @include vw-pc(width, 225);
+                @include vw-pc(height, 100);
+                @include vw-pc(margin-top, 15);
     
-                .inp-check {
+                .inp-comm {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -178,86 +201,148 @@
                     display: flex;
                     height: 100%;
                     border: solid transparent;
-                    @include vw-wide-pc(border-width, 3);
-                    @include vw-wide-pc(border-radius, 10);
+                    @include vw-pc(border-width, 3);
+                    @include vw-pc(border-radius, 10);
                     box-sizing: border-box;
                     justify-content: center;
                     align-items: center;
                     background-color: #fff;
                     
-                    .img-label {
+                    .img-option {
                         float: left;
-                        @include vw-wide-pc(width, 118);
-                        @include vw-wide-pc(height, 67);
+                        @include vw-pc(width, 118);
+                        @include vw-pc(height, 67);
                     }
 
-                    .txt-label {
-                        @include vw-wide-pc(margin-left, 8);
+                    .txt-option {
+                        @include vw-pc(margin-left, 8);
                         font-weight: bold;
-                        @include vw-wide-pc(font-size, 16);
+                        @include vw-pc(font-size, 16);
                     }
                 }
             }
         }
 
-        .txt-price {
+        .box-buy-price {
             display: block;
             position: relative;
-            @include vw-wide-pc(margin-top, 30);
+            @include vw-pc(margin-top, 30);
 
             &:after {
                 content: '';
                 display: block;
                 width: 100%;
-                @include vw-wide-pc(height, 1);
-                @include vw-wide-pc(margin-top, 20);
+                @include vw-pc(height, 1);
+                @include vw-pc(margin-top, 20);
                 background-color: #000;
             }
-        }
 
-        .item-price {
-            display: flex;
-            align-items: baseline;
-
-            .tit-item {
-                font-weight: bold;
-                @include vw-wide-pc(font-size, 20);
+            .box-item {
+                display: flex;
+                align-items: baseline;
+    
+                .txt-price {
+                    font-weight: bold;
+                    @include vw-pc(font-size, 20);
+                }
+    
+                em {
+                    margin-left: auto;
+                    font-weight: bold;
+                    @include vw-pc(font-size, 28);
+                }
+    
+                +.box-item {
+                    @include vw-pc(margin-top, 16);
+                }
             }
 
-            .txt-item {
-                margin-left: auto;
-                font-weight: bold;
-                @include vw-wide-pc(font-size, 28);
-            }
-
-            +.item-price {
-                @include vw-wide-pc(margin-top, 16);
-            }
         }
 
         .link-buy {
             display: block;
             width: 100%;
-            @include vw-wide-pc(margin-top, 20);
+            @include vw-pc(margin-top, 20);
             padding: 1.04167vw 0;
-            @include vw-wide-pc(border-radius, 30);
+            @include vw-pc(border-radius, 30);
             background-color: #000;
             font-weight: bold;
-            @include vw-wide-pc(font-size, 22);
+            @include vw-pc(font-size, 22);
             text-align: center;
             color: #fff;
         }
+
+        .box-buy-benefit {
+            @include vw-pc(margin-top, 35);
+
+            .benefit-tit {
+                display: block;
+                position: relative;
+                @include vw-pc(font-size, 20);
+                letter-spacing: -.025em;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    @include vw-pc(width, 267);
+                    height: 1px;
+                    background-color: rgba(0,0,0,0.3);
+                }
+            }
+
+            .list-benefit {
+                @include vw-pc(margin-top, 35);
+                @include clearfix;
+
+                li {
+                    float: left;
+                    width: 25%;
+                }
+
+                .box-img {
+                    @include vw-pc(width, 105);
+                    @include vw-pc(height, 105);
+                    margin: 0 auto;
+                    @include vw-pc(border-radius, 10);
+                }
+
+                .img-benefit {
+                    width: 100%;
+                }
+
+                .txt-benefit {
+                    display: block;
+                    @include vw-pc(margin-top, 10);
+                    font-weight: bold;
+                    @include vw-pc(font-size, 15);
+                    text-align: center;
+                    letter-spacing: -.025em;
+                }
+
+                .btn-benefit {
+                    display: block;
+                }
+            }
+        }
     }
 
-    .box-slide {
-        @include vw-wide-pc(width, 740);
-        @include vw-wide-pc(height, 740);
+    .box-buy-slide {
+        @include vw-pc(width, 740);
+        @include vw-pc(height, 740);
         border: 1.04167vw solid #fff;
         background-color: #f5f2f7;
         box-sizing: border-box;
     }
 }
 
+.section-benefit {
+    background-image: url("../images/bg/bg_benefit_pc.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include vw-wide-pc(height, 1765);
+}
 
 /* mobile */
 @media screen and (max-width: 768px) {
@@ -270,17 +355,17 @@
         padding-top: 44px;
     }
 
-    .section-prm {
-        .tit-section {
+    .section-comm {
+        .section-tit {
             @include vw-mo(font-size, 68);
         }
     }
     
     .section-kv {
         @include vw-mo(height, 1180);
-        background-image: url("../images/common/bg/bg_kv_mo.gif");
+        background-image: url("../images/bg/bg_kv_mo.gif");
 
-        .area-tit {
+        .area-section-tit {
             padding: 23.88889vw 0 0;
             text-align: center;
         }
