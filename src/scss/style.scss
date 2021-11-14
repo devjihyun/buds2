@@ -349,7 +349,8 @@
             position: relative;
             width: 100%;
             height: 100%;
-            border: 1.04167vw solid #fff;
+            border: solid #fff;
+            @include vw-pc(border-width, 20);
             background-color: #f5f2f7;
             box-sizing: border-box;
         }
@@ -368,8 +369,8 @@
 
             .box-item {
                 float: left;
-                @include vw-pc(width, 740);
-                @include vw-pc(height, 740);
+                @include vw-pc(width, 700);
+                // @include vw-pc(height, 700);
             }
         }
 
