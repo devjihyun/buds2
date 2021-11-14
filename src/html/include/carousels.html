@@ -1,36 +1,50 @@
-<div class="active carousel with-slidenav">
-    <ul>
-        <li class="current slide">
-            <img src="" alt="">
-        </li>
-        <li class="next slide" aria-hidden="true">
-            <img src="" alt="">
-        </li>
-        <li class="prev slide" aria-hidden="true">
-            <img src="" alt="">
-        </li>
-    </ul>
-    <ul class="controls">
-        <li>
-            <button type="button" class="btn-prev">
-                <img alt="Previous Item" src="../../img/chevron-left-75c7dd0b.png">
-            </button>
-        </li>
-        <li>
-            <button type="button" class="btn-next">
-                <img alt="Next Item" src="../../img/chevron-right-2f19bc8b.png">
-            </button>
-        </li>
-    </ul>
-    <ul class="slidenav">
-        <li>
-            <button data-action="start">
-                <span class="visuallyhidden">Start Animation </span>▶
-            </button>
-        </li>
-        <li><button class="current" data-slide="0"><span class="visuallyhidden">News</span> 1 <span
-                    class="visuallyhidden">(Current Item)</span></button></li>
-        <li><button data-slide="1" class=""><span class="visuallyhidden">News</span> 2</button></li>
-        <li><button data-slide="2" class=""><span class="visuallyhidden">News</span> 3</button></li>
-    </ul>
+<div class="container-slide">
+
+    <div class="inner-slide">
+        <ul class="list-page" role="tablist" aria-label="슬라이드 페이지 네비게이션">
+            <li>
+                <button class="btn-page btn-active" type="button" role="tab" aria-label="1번 슬라이드로 이동" aria-selected="true" aria-controls="slide01"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="2번 슬라이드로 이동" aria-selected="false" aria-controls="slide02"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="3번 슬라이드로 이동" aria-selected="false" aria-controls="slide03"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="4번 슬라이드로 이동" aria-selected="false" aria-controls="slide04"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="5번 슬라이드로 이동" aria-selected="false" aria-controls="slide05"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="6번 슬라이드로 이동" aria-selected="false" aria-controls="slide06"></button>
+            </li>
+            <li>
+                <button class="btn-page" type="button" role="tab" aria-label="7번 슬라이드로 이동" aria-selected="false" aria-controls="slide07"></button>
+            </li>
+        </ul>
+    
+        <div class="box-slide-track" aria-live="polite" style="width:1920px;transform:translate3d(0px, 0px, 0px)">
+            <div id="slide01" class="box-item" role="tabpanel" aria-label="1번 슬라이드">
+                <img src="/images/contents/img_slide_lavender01.png" class="img-slide" alt="라벤더 버즈2 + 노티드 커버">
+            </div>
+            <div id="slide02" class="box-item" role="tabpanel" aria-label="2번 슬라이드">
+                <img src="/images/contents/img_slide_lavender01.png" class="img-slide" alt="라벤더 버즈2 + 노티드 커버">
+            </div>
+            <div id="slide03" class="box-item" role="tabpanel" aria-label="3번 슬라이드">
+                <img src="/images/contents/img_slide_lavender01.png" class="img-slide" alt="라벤더 버즈2 + 노티드 커버">
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>

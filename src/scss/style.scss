@@ -329,11 +329,53 @@
     }
 
     .box-buy-slide {
-        @include vw-pc(width, 740);
-        @include vw-pc(height, 740);
-        border: 1.04167vw solid #fff;
-        background-color: #f5f2f7;
-        box-sizing: border-box;
+        @include vw-pc(width, 850);
+        @include vw-pc(height, 850);
+
+        .container-slide {
+            position: relative;
+            @include vw-pc(width, 740);
+            @include vw-pc(height, 740);
+            margin: 0 auto;
+            @include vw-pc(padding-bottom, 32);
+            background-image: url("../images/bg/bg_slide_pc.png");
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .inner-slide {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 1.04167vw solid #fff;
+            background-color: #f5f2f7;
+            box-sizing: border-box;
+        }
+
+        .list-page {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box-slide-track {
+            height: 100%;
+            transition: transform .3s ease;
+            @include clearfix;
+
+            .box-item {
+                float: left;
+                @include vw-pc(width, 740);
+                @include vw-pc(height, 740);
+            }
+        }
+
+        .img-slide {
+            width: 100%;
+        }
     }
 }
 
