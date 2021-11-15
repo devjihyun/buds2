@@ -16,7 +16,7 @@
     border: 0;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%); 
+    clip-path: inset(50%);
     white-space: nowrap;
 }
 
@@ -111,7 +111,7 @@
     .section-tit {
         @include vw-wide-pc(font-size, 56);
     }
-    
+
     .box-txt {
         display: block;
         @include vw-wide-pc(margin-top, 20);
@@ -130,7 +130,7 @@
             @include vw-wide-pc(font-size, 20);
             line-height: 1.4;
         }
-    }    
+    }
 }
 
 .section-buy {
@@ -141,10 +141,42 @@
     }
 
     .area-section-tit {
+        text-align: center;
 
         .section-tit {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
             line-height: 1.1;
-            text-align: center;
+            vertical-align: top;
+
+            em {
+                position: relative;
+                font-weight: bold;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -60%;
+                    right: -24%;
+                    z-index: -1;
+                    @include vw-pc(width, 268);
+                    @include vw-pc(height, 132);
+                    background: url(/images/bg/bg_buy_deco01.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -36%;
+                left: -1%;
+                @include vw-pc(width, 62);
+                @include vw-pc(height, 56);
+                background: url(/images/bg/bg_buy_deco05.png) no-repeat;
+                background-size: cover;
+            }
         }
     }
 
@@ -162,12 +194,28 @@
 
         .box-cont-tit {
             .cont-tit {
+                display: inline-block;
+                position: relative;
+                @include vw-pc(padding-right, 90);
                 font-weight: bold;
                 @include vw-pc(font-size, 44);
                 line-height: 1.5;
+                vertical-align: top;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    right: 0;
+                    @include vw-pc(width, 81);
+                    @include vw-pc(height, 89);
+                    background: url(/images/bg/bg_buy_deco03.png) no-repeat;
+                    background-size: cover;
+                }
             }
 
             .txt-model {
+                display: block;
                 @include vw-pc(font-size, 16);
             }
         }
@@ -176,13 +224,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-    
+
             .box-item {
                 position: relative;
                 @include vw-pc(width, 225);
                 @include vw-pc(height, 100);
                 @include vw-pc(margin-top, 15);
-    
+
                 .inp-comm {
                     position: absolute;
                     top: 0;
@@ -192,11 +240,11 @@
                     opacity: .01;
                     cursor: pointer;
 
-                    &:checked + .label-option {
+                    &:checked+.label-option {
                         border-color: #000;
                     }
                 }
-                
+
                 .label-option {
                     display: flex;
                     height: 100%;
@@ -207,7 +255,7 @@
                     justify-content: center;
                     align-items: center;
                     background-color: #fff;
-                    
+
                     .img-option {
                         float: left;
                         @include vw-pc(width, 118);
@@ -240,18 +288,18 @@
             .box-item {
                 display: flex;
                 align-items: baseline;
-    
+
                 .txt-price {
                     font-weight: bold;
                     @include vw-pc(font-size, 20);
                 }
-    
+
                 em {
                     margin-left: auto;
                     font-weight: bold;
                     @include vw-pc(font-size, 28);
                 }
-    
+
                 +.box-item {
                     @include vw-pc(margin-top, 16);
                 }
@@ -288,7 +336,7 @@
                     right: 0;
                     @include vw-pc(width, 267);
                     height: 1px;
-                    background-color: rgba(0,0,0,0.3);
+                    background-color: rgba(0, 0, 0, 0.3);
                 }
             }
 
@@ -342,6 +390,29 @@
             background-position: center bottom;
             background-repeat: no-repeat;
             background-size: 100%;
+
+            &:after {
+                content: '';
+                position: absolute;
+                @include vw-pc(top, -54);
+                @include vw-pc(left, -39);
+                @include vw-pc(width, 155);
+                @include vw-pc(height, 151);
+                background: url(/images/bg/bg_buy_deco02.png) no-repeat;
+                background-size: cover;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                @include vw-pc(right, -61);
+                @include vw-pc(bottom, -47);
+                z-index: 1;
+                @include vw-pc(width, 242);
+                @include vw-pc(height, 222);
+                background: url(/images/bg/bg_buy_deco04.png) no-repeat;
+                background-size: cover;
+            }
         }
 
         .inner-slide {
@@ -356,10 +427,51 @@
         }
 
         .list-page {
+            display: flex;
             position: absolute;
             right: 0;
-            bottom: 0;
+            @include vw-pc(bottom, 40);
             left: 0;
+            z-index: 1;
+            justify-content: center;
+
+            li {
+                display: block;
+                @include vw-pc(margin-left, 2);
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .btn-page {
+                position: relative;
+                @include vw-pc(width, 30);
+                @include vw-pc(height, 30);
+                border: 0;
+                background-color: transparent;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include vw-pc(width, 12);
+                    @include vw-pc(height, 12);
+                    @include vw-pc(border-width, 1);
+                    border: solid #000;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    transform: translate(50%, 50%);
+                }
+            }
+
+            .btn-active {
+
+                &:before {
+                    background-color: #000;
+                }
+            }
         }
 
         .box-slide-track {
@@ -370,30 +482,137 @@
             .box-item {
                 float: left;
                 @include vw-pc(width, 700);
-                // @include vw-pc(height, 700);
+            }
+
+            .img-slide {
+                width: 100%;
             }
         }
 
-        .img-slide {
-            width: 100%;
+        .btn-control {
+            position: absolute;
+            top: 50%;
+            @include vw-pc(width, 42);
+            @include vw-pc(height, 42);
+            background-color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include vw-pc(padding, 21);
+                border: solid black;
+                border-top-width: 0;
+                @include vw-pc(border-right-width, 2);
+                @include vw-pc(border-bottom-width, 2);
+                border-left-width: 0;
+            }
+        }
+
+        .btn-prev {
+            @include vw-pc(left, -30);
+
+            &:after {
+                transform: rotate(135deg);
+            }
+        }
+
+        .btn-next {
+            @include vw-pc(right, -30);
+
+            &:after {
+                transform: rotate(-45deg);
+            }
         }
     }
 }
 
 .section-benefit {
+    @include vw-wide-pc(height, 1765);
     background-image: url("../images/bg/bg_benefit_pc.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    @include vw-wide-pc(height, 1765);
+
+    .area-section-tit {
+        text-align: center;
+    }
+
+    .section-tit {
+        @include vw-pc(font-size, 26);
+
+        em {
+            display: block;
+            @include vw-pc(margin-top, 20);
+            font-weight: bold;
+            @include vw-pc(font-size, 56);
+            line-height: 1.18;
+            letter-spacing: -0.025em;
+        }
+    }
+
+    .box-txt {
+        .txt-date {
+            display: block;
+            @include vw-pc(margin-top, 20);
+            font-weight: bold;
+            @include vw-pc(font-size, 18);
+            line-height: 3.6;
+        }
+
+        .txt-notice {
+            display: block;
+            @include vw-pc(font-size, 17);
+            line-height: 1.6;
+            letter-spacing: -0.025em;
+        }
+    }
+
+    .area-section-cont {
+
+        .box-cont-tit {
+            .tit-cont {
+                font-weight: bold;
+                @include vw-pc(font-size, 34);
+                line-height: 1.9;
+                letter-spacing: -0.025em;
+            }
+        }
+    }
+
+    .list-benefit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            display: flex;
+            @include vw-pc(width, 710);
+            padding: 5.55556vw 4.02778vw;
+
+            border: solid #fff;
+            @include vw-pc(border-width, 13);
+            background-color: #fbf1be;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .txt-benefit {
+            display: block;
+            @include vw-pc(margin-left, 45);
+        }
+    }
 }
 
-/* mobile */
+/* 768px 이하 */
 @media screen and (max-width: 768px) {
+
     /* layout */
     #header {
         height: 44px;
     }
-    
+
     #main {
         padding-top: 44px;
     }
@@ -403,7 +622,7 @@
             @include vw-mo(font-size, 68);
         }
     }
-    
+
     .section-kv {
         @include vw-mo(height, 1180);
         background-image: url("../images/bg/bg_kv_mo.gif");
@@ -416,12 +635,12 @@
         .txt-info {
             @include vw-mo(margin-top, 20);
         }
-    
+
         .info-summary {
             @include vw-mo(font-size, 30);
             @include vw-mo(line-height, 42);
         }
-    
+
         .info-date {
             @include vw-mo(margin-top, 20);
             @include vw-mo(font-size, 30);

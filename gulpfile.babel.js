@@ -53,7 +53,8 @@ const clean = () => del(["build/", ".publish"]);
 const webserver = () => 
     gulp
         .src("build")
-        .pipe(ws({livereload: true, open: true }));
+        .pipe(ws({
+            livereload: true, open: true}));
 
 const img = () => 
     gulp
