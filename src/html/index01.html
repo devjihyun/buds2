@@ -54,7 +54,7 @@
                             <div class="box-cont box-buy">
                                 <div class="box-cont-tit">
                                     <h3 class="cont-tit">Galaxy Buds2</h3>
-                                    <span id="modelName" class="txt-model" aria-hidden="true">SM-R177NLVAEVT</span>
+                                    <span id="model01" class="txt-model" aria-hidden="true">SM-R177NLVAEVT</span>
                                     <!-- .link-buy '지금 구매하기' 링크와 연결 -->
                                 </div>
                                 <fieldset>
@@ -65,7 +65,7 @@
                                                 checked><!-- 선택 시 checked 속성 추가 -->
                                             <label for="color-option01" class="label-option">
                                                 <img src="images/contents/img_option01.png" class="img-option">
-                                                <span class="txt-option">라벤더</span>
+                                                <span id="option01" class="txt-option">라벤더</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -73,7 +73,7 @@
                                                 class="inp-comm">
                                             <label for="color-option02" class="label-option">
                                                 <img src="images/contents/img_option02.png" class="img-option">
-                                                <span class="txt-option">올리브</span>
+                                                <span id="option02" class="txt-option">올리브</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -81,7 +81,7 @@
                                                 class="inp-comm">
                                             <label for="color-option03" class="label-option">
                                                 <img src="images/contents/img_option03.png" class="img-option">
-                                                <span class="txt-option">화이트</span>
+                                                <span id="option03" class="txt-option">화이트</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -89,13 +89,12 @@
                                                 class="inp-comm">
                                             <label for="color-option04" class="label-option">
                                                 <img src="images/contents/img_option04.png" class="img-option">
-                                                <span class="txt-option">그라파이트</span>
+                                                <span id="option04" class="txt-option">그라파이트</span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="box-buy-price">
                                         <span role="text" class="txt-comm">
-                                            <span class="visually-hidden">모델명 : SM-R177NLVAEVT</span>
                                             <span class="box-item">
                                                 <span class="txt-price">판매가</span>
                                                 <em>149,000원</em>
@@ -106,8 +105,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <a href="#none" class="link-buy" aria-describedby="modelName">지금 구매하기</a>
-                                    <!-- .txt-model id와 aria-describedby로 모델명 연결 -->
+                                    <a href="#none" class="link-buy" aria-describedby="model01 option01">지금 구매하기</a><!-- aria-describedby로 모델명(.txt-model), 옵션명(.txt-option) 연결 -->
                                 </fieldset>
                                 <div class="box-buy-benefit">
                                     <strong class="benefit-tit">갤럭시 캠퍼스 스토어 혜택</strong>
@@ -131,7 +129,7 @@
                                             <span class="txt-benefit" role="text">스타벅스 <br>기프티콘 2매</span>
                                         </li>
                                         <li>
-                                            <a href="#none" class="btn-benefit" role="button">
+                                            <a href="#none" class="btn-benefit">
                                                 <span class="box-img">
                                                     <img src="images/contents/img_benefit_s04.gif" class="img-benefit">
                                                 </span>
@@ -170,34 +168,42 @@
                             </div>
                             <ul class="list-benefit">
                                 <li>
-                                    <span class="box-img">
-                                        <img src="images/contents/img_benefit01.png" class="img-benefit">
-                                    </span>
-                                    <span class="txt-benefit" role="text">28,000원 상당 <br>Galaxy Buds2 <br>노티드 커버 증정</span>
+                                    <div class="box-item">
+                                        <div class="box-img">
+                                            <img src="images/contents/img_benefit01.png" class="img-benefit">
+                                        </div>
+                                        <span class="txt-benefit" role="text">28,000원 상당 <br>Galaxy Buds2 <br>노티드 커버 증정</span>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span class="box-img">
-                                        <img src="images/contents/img_benefit_s01.gif" class="img-benefit">
-                                    </span>
-                                    <span class="txt-benefit" role="text">삼성케어플러스 <br>20% 할인 쿠폰</span>
+                                    <div class="box-item">
+                                        <div class="box-img">
+                                            <img src="images/contents/img_benefit01.png" class="img-benefit">
+                                        </div>
+                                        <span class="txt-benefit" role="text">삼성케어플러스 <br>20% 할인 쿠폰</span>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span class="box-img">
-                                        <img src="images/contents/img_benefit_s01.gif" class="img-benefit">
-                                    </span>
-                                    <span class="txt-benefit" role="text">스타벅스 아메리카노 <br>기프티콘 2매 증정 <br>사용 후기 이벤트</span>
-                                    <span>* 1대당 2매, 선착순 9,000대 (tall size)</span>
-                                    <a href="#none" class="link-">참여 방법 확인하기</a>
-                                    <a href="#none" class="link-">사용 후기 쓰러가기</a>
+                                    <div class="box-item">
+                                        <div class="box-img">
+                                            <img src="images/contents/img_benefit01.png" class="img-benefit">
+                                        </div>
+                                        <span class="txt-benefit" role="text">스타벅스 아메리카노 <br>기프티콘 2매 증정 <br>사용 후기 이벤트</span>
+                                        <span>* 1대당 2매, 선착순 9,000대 (tall size)</span>
+                                        <a href="#none" class="link-">참여 방법 확인하기</a>
+                                        <a href="#none" class="link-">사용 후기 쓰러가기</a>
+                                    </div>
                                 </li>
                                 <li>
-                                    <span class="box-img">
-                                        <img src="images/contents/img_benefit_s01.gif" class="img-benefit">
-                                    </span>
-                                    <span class="txt-benefit" role="text">1300k 스마트 액세서리 <br>50% 할인 쿠폰</span>
-                                    <span role="text">*8,000대 한정 수량 <br>*2021.10.20까지 구매 및 응모 완료 고객 한정</span>
-                                    <a href="#none" class="link-direct">삼성케어플러스 바로가기<span class="ico-direct"></span></a>
-                                    <a href="#none" class="link-">1300K 응모하기</a>
+                                    <div class="box-item">
+                                        <div class="box-img">
+                                            <img src="images/contents/img_benefit01.png" class="img-benefit">
+                                        </div>
+                                        <span class="txt-benefit" role="text">1300k 스마트 액세서리 <br>50% 할인 쿠폰</span>
+                                        <span role="text">*8,000대 한정 수량 <br>*2021.10.20까지 구매 및 응모 완료 고객 한정</span>
+                                        <a href="#none" class="link-direct">삼성케어플러스 바로가기<span class="ico-direct"></span></a>
+                                        <a href="#none" class="link-">1300K 응모하기</a>
+                                    </div>
                                 </li>
                             </ul>
                             <div>
