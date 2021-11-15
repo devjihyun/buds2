@@ -54,18 +54,18 @@
                             <div class="box-cont box-buy">
                                 <div class="box-cont-tit">
                                     <h3 class="cont-tit">Galaxy Buds2</h3>
-                                    <span id="modelName" class="txt-model" aria-hidden="true">SM-R177NLVAEVT</span>
+                                    <span id="model01" class="txt-model" aria-hidden="true">SM-R177NLVAEVT</span>
                                     <!-- .link-buy '지금 구매하기' 링크와 연결 -->
                                 </div>
                                 <fieldset>
                                     <legend class="visually-hidden">색상 선택</legend>
-                                    <div class="box-buy-option" role="group">
+                                    <div class="box-buy-option">
                                         <div class="box-item">
                                             <input type="radio" id="color-option01" name="color-option" class="inp-comm"
                                                 checked><!-- 선택 시 checked 속성 추가 -->
                                             <label for="color-option01" class="label-option">
                                                 <img src="images/contents/img_option01.png" class="img-option">
-                                                <span class="txt-option">라벤더</span>
+                                                <span id="option01" class="txt-option">라벤더</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -73,7 +73,7 @@
                                                 class="inp-comm">
                                             <label for="color-option02" class="label-option">
                                                 <img src="images/contents/img_option02.png" class="img-option">
-                                                <span class="txt-option">올리브</span>
+                                                <span id="option02" class="txt-option">올리브</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -81,7 +81,7 @@
                                                 class="inp-comm">
                                             <label for="color-option03" class="label-option">
                                                 <img src="images/contents/img_option03.png" class="img-option">
-                                                <span class="txt-option">화이트</span>
+                                                <span id="option03" class="txt-option">화이트</span>
                                             </label>
                                         </div>
                                         <div class="box-item">
@@ -89,13 +89,12 @@
                                                 class="inp-comm">
                                             <label for="color-option04" class="label-option">
                                                 <img src="images/contents/img_option04.png" class="img-option">
-                                                <span class="txt-option">그라파이트</span>
+                                                <span id="option04" class="txt-option">그라파이트</span>
                                             </label>
                                         </div>
                                     </div>
                                     <div class="box-buy-price">
                                         <span role="text" class="txt-comm">
-                                            <span class="visually-hidden">모델명 : SM-R177NLVAEVT</span>
                                             <span class="box-item">
                                                 <span class="txt-price">판매가</span>
                                                 <em>149,000원</em>
@@ -106,8 +105,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <a href="#none" class="link-buy" aria-describedby="modelName">지금 구매하기</a>
-                                    <!-- .txt-model id와 aria-describedby로 모델명 연결 -->
+                                    <a href="#none" class="link-buy" aria-labelledby="model01 option01">지금 구매하기</a><!-- aria-labelledby로 모델명(.txt-model), 옵션명(.txt-option) 연결 -->
                                 </fieldset>
                                 <div class="box-buy-benefit">
                                     <strong class="benefit-tit">갤럭시 캠퍼스 스토어 혜택</strong>
