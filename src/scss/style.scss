@@ -28,6 +28,28 @@
     display: block;
 }
 
+.link-comm {
+    display: inline-block;
+    border-bottom: 1px solid #000;
+    @include vw-pc(font-size, 15);
+    line-height: 1.5;
+    color: #000;
+    vertical-align: top;
+}
+
+.link-comm02 {
+    display: block;
+    padding: 0.55556vw 1.38889vw;
+    @include vw-pc(border-radius, 16.5);
+    font-weight: bold;
+    @include vw-pc(font-size, 15);
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
 
 /* layout */
 // 아이디 클래스로 바꾸기
@@ -94,9 +116,9 @@
 }
 
 .section-kv {
-    background: url("../images/bg/bg_kv_pc.gif") no-repeat ;
+    background: url("../images/bg/bg_kv_pc.gif") no-repeat;
     background-size: cover;
-    @include vw-wide-pc(height, 750);
+    @include vw-pc(height, 750);
 
     .inner-section {
         max-width: 1920px;
@@ -108,26 +130,24 @@
     }
 
     .section-tit {
-        @include vw-wide-pc(font-size, 56);
+        @include vw-pc(font-size, 56);
     }
 
     .box-txt {
         display: block;
-        @include vw-wide-pc(margin-top, 20);
+        @include vw-pc(margin-top, 20);
+        @include vw-pc(font-size, 20);
+        line-height: 1.4;
 
         .txt-summary {
             display: block;
             font-weight: 400;
-            @include vw-wide-pc(font-size, 20);
-            line-height: 1.3;
         }
 
         .txt-date {
             display: block;
-            @include vw-wide-pc(margin-top, 20);
+            @include vw-pc(margin-top, 20);
             font-weight: bold;
-            @include vw-wide-pc(font-size, 20);
-            line-height: 1.4;
         }
     }
 }
@@ -195,7 +215,6 @@
             .cont-tit {
                 display: inline-block;
                 position: relative;
-                @include vw-pc(padding-right, 90);
                 font-weight: bold;
                 @include vw-pc(font-size, 44);
                 line-height: 1.5;
@@ -205,7 +224,7 @@
                     content: '';
                     position: absolute;
                     top: -50%;
-                    right: 0;
+                    right: -30%;
                     @include vw-pc(width, 81);
                     @include vw-pc(height, 89);
                     background: url(/images/bg/bg_buy_deco03.png) no-repeat;
@@ -224,7 +243,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            .box-item {
+            .item-option {
                 position: relative;
                 @include vw-pc(width, 225);
                 @include vw-pc(height, 100);
@@ -255,7 +274,7 @@
                     align-items: center;
                     background-color: #fff;
 
-                    .img-option {
+                    .option-img {
                         float: left;
                         @include vw-pc(width, 118);
                         @include vw-pc(height, 67);
@@ -284,8 +303,9 @@
                 background-color: #000;
             }
 
-            .box-item {
+            .item-price {
                 display: flex;
+                justify-content: space-between;
                 align-items: baseline;
 
                 .txt-price {
@@ -307,16 +327,11 @@
         }
 
         .link-buy {
-            display: block;
             width: 100%;
             @include vw-pc(margin-top, 20);
             padding: 1.04167vw 0;
             @include vw-pc(border-radius, 30);
-            background-color: #000;
-            font-weight: bold;
             @include vw-pc(font-size, 22);
-            text-align: center;
-            color: #fff;
         }
 
         .box-buy-benefit {
@@ -339,7 +354,7 @@
                 }
             }
 
-            .list-benefit {
+            .benefit-list {
                 @include vw-pc(margin-top, 35);
                 @include clearfix;
 
@@ -355,20 +370,21 @@
                     @include vw-pc(border-radius, 10);
                 }
 
-                .img-benefit {
+                .benefit-img {
                     width: 100%;
                 }
 
-                .txt-benefit {
+                .benefit-txt {
                     display: block;
                     @include vw-pc(margin-top, 10);
                     font-weight: bold;
                     @include vw-pc(font-size, 15);
                     text-align: center;
                     letter-spacing: -.025em;
+                    color: #000;
                 }
 
-                .btn-benefit {
+                .more-link {
                     display: block;
                 }
             }
@@ -460,7 +476,7 @@
                     @include vw-pc(border-width, 3);
                     border-radius: 50%;
                     box-sizing: border-box;
-                    transform: translate(-50%,-50%);
+                    transform: translate(-50%, -50%);
                 }
             }
 
@@ -482,7 +498,7 @@
                 @include vw-pc(width, 700);
             }
 
-            .img-slide {
+            .slide-img {
                 width: 100%;
             }
         }
@@ -492,13 +508,13 @@
             top: 50%;
             right: 0;
             left: 0;
-            
+
             button {
                 position: absolute;
                 @include vw-pc(width, 60);
                 @include vw-pc(height, 60);
                 background-color: transparent;
-    
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -511,19 +527,19 @@
                     border-left-width: 0;
                 }
             }
-    
+
             .btn-prev {
                 @include vw-pc(left, -60);
-    
+
                 &:after {
                     right: 15%;
                     transform: rotate(135deg);
                 }
             }
-    
+
             .btn-next {
                 @include vw-pc(right, -60);
-    
+
                 &:after {
                     left: 15%;
                     transform: rotate(-45deg);
@@ -540,41 +556,57 @@
 
     .inner-section {
         max-width: 1470px;
+        @include vw-pc(padding-bottom, 120);
     }
 
     .area-section-tit {
         text-align: center;
-    }
 
-    .section-tit {
-        @include vw-pc(font-size, 26);
+        .section-tit {
+            display: inline-block;
+            position: relative;
+            @include vw-pc(font-size, 26);
+            vertical-align: top;
 
-        em {
-            display: block;
-            @include vw-pc(margin-top, 20);
-            font-weight: bold;
-            @include vw-pc(font-size, 56);
-            line-height: 1.18;
-            letter-spacing: -0.025em;
+            em {
+                display: block;
+                position: relative;
+                @include vw-pc(margin-top, 20);
+                font-weight: bold;
+                @include vw-pc(font-size, 56);
+                line-height: 1.18;
+                letter-spacing: -0.025em;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 10%;
+                right: -15%;
+                @include vw-pc(width, 54);
+                @include vw-pc(height, 73);
+                background: url(/images/bg/bg_benefit_deco01.png) no-repeat;
+                background-size: cover;
+            }
         }
-    }
 
-    .box-txt {
-        .txt-date {
-            display: block;
-            @include vw-pc(margin-top, 20);
-            font-weight: bold;
-            @include vw-pc(font-size, 18);
-        }
+        .box-txt {
+            .txt-date {
+                display: block;
+                @include vw-pc(margin-top, 20);
+                font-weight: bold;
+                @include vw-pc(font-size, 18);
+            }
 
-        .txt-notice {
-            display: block;
-            @include vw-pc(font-size, 17);
-            line-height: 1.6;
-            letter-spacing: -0.025em;
+            .txt-notice {
+                display: block;
+                @include vw-pc(font-size, 17);
+                line-height: 1.6;
+                letter-spacing: -0.025em;
 
-            &:first-of-type {
-                @include vw-pc(margin-top, 39);
+                &:first-of-type {
+                    @include vw-pc(margin-top, 39);
+                }
             }
         }
     }
@@ -582,16 +614,29 @@
     .area-section-cont {
 
         .box-cont-tit {
-            .tit-cont {
+
+            .cont-tit {
+                position: relative;
+                @include vw-pc(margin-left, 15);
                 font-weight: bold;
                 @include vw-pc(font-size, 34);
                 line-height: 1.9;
                 letter-spacing: -0.025em;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    @include vw-pc(width, 1097);
+                    height: 2px;
+                    background-color: #000;
+                }
             }
         }
     }
 
-    .list-benefit {
+    .benefit-list {
         display: flex;
         @include vw-pc(margin-top, -128);
         @include vw-pc(padding-top, 72);
@@ -605,20 +650,20 @@
             background-position: center bottom;
             background-size: 100%;
         }
-        
-        .box-item {
+
+        .benefit-item {
             display: flex;
             position: relative;
             @include vw-pc(width, 710);
             height: 100%;
             margin: 0 auto;
-            padding: 5.55556vw 4.02778vw;
+            padding: 5.55556vw 0;
             border: solid #fff;
             @include vw-pc(border-width, 13);
             background-color: #fbf1be;
             box-sizing: border-box;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
 
             &:before {
                 content: '';
@@ -638,16 +683,167 @@
                 left: 35%;
                 @include vw-pc(width, 177);
                 @include vw-pc(height, 112);
-                background: url("../images/bg/bg_benefit_deco01.png") no-repeat;
+                background: url("../images/bg/bg_benefit_deco03.png") no-repeat;
                 background-size: cover;
+            }
+
+            .benefit-tit {
+                position: relative;
             }
         }
 
-        .txt-benefit {
-            display: block;
+        .benefit-item01 {
+            .benefit-tit {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -15%;
+                    bottom: -10%;
+                    @include vw-pc(width, 215);
+                    @include vw-pc(height, 42);
+                    background: url("../images/bg/bg_benefit_deco04.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .benefit-item02 {
+            background-color: #dcf0e8;
+
+            .benefit-tit {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: -25%;
+                    @include vw-pc(width, 165);
+                    @include vw-pc(height, 21);
+                    background: url("../images/bg/bg_benefit_deco05_1.png") no-repeat;
+                    background-size: cover;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -10%;
+                    right: -35%;
+                    @include vw-pc(width, 46);
+                    @include vw-pc(height, 49);
+                    background: url("../images/bg/bg_benefit_deco05_2.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .link-comm {
+                @include vw-pc(margin-top, 20);
+            }
+        }
+
+        .benefit-item03 {
+            background-color: #ffe6d6;
+
+            .benefit-tit {
+                letter-spacing: -0.05em;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -30%;
+                    right: 10%;
+                    @include vw-pc(width, 54);
+                    @include vw-pc(height, 45);
+                    background: url("../images/bg/bg_benefit_deco06_1.png") no-repeat;
+                    background-size: cover;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 25%;
+                    left: -5%;
+                    @include vw-pc(width, 157);
+                    @include vw-pc(height, 54);
+                    background: url("../images/bg/bg_benefit_deco06_2.png") no-repeat;
+                    background-size: cover;
+                }
+
+                .txt-comm {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .benefit-item04 {
+            background-color: #e2f6db;
+
+            .benefit-tit {
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 35%;
+                    bottom: -10%;
+                    @include vw-pc(width, 187);
+                    @include vw-pc(height, 23);
+                    background: url("../images/bg/bg_benefit_deco07.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .box-img {}
+
+        .box-txt {
+            display: flex;
+            @include vw-pc(margin-left, 45);
+            flex-direction: column;
+
+            .benefit-tit {
+                display: block;
+                font-weight: bold;
+                @include vw-pc(font-size, 28);
+                line-height: 1.28;
+            }
+
+            .benefit-txt {
+                display: block;
+                @include vw-pc(margin-top, 15);
+                @include vw-pc(font-size, 16);
+                line-height: 1.5;
+                letter-spacing: -0.05em;
+                color: rgba(0, 0, 0, 0.7);
+            }
+
+            .box-link {
+                display: flex;
+                @include vw-pc(margin-top, 30);
+                align-items: center;
+
+
+
+                .link-comm02 {
+                    @include vw-pc(margin-left, 20);
+                }
+            }
+        }
+    }
+
+    .box-notice {
+        @include vw-pc(margin-top, 70);
+        text-align: center;
+
+        .notice-list {
+            @include vw-pc(font-size, 14);
+            line-height: 1.6;
+            letter-spacing: -0.025em;
+        }
+
+        .notice-link {
+            @include vw-pc(margin-top, 50);
             font-weight: bold;
-            @include vw-pc(font-size, 28);
-            line-height: 1.28;
+            @include vw-pc(font-size, 18);
+            letter-spacing: -0.025em;
         }
     }
 }
@@ -672,26 +868,198 @@
 
     .section-kv {
         @include vw-mo(height, 1180);
-        background: url("../images/bg/bg_kv_mo.gif");
+        background: url("../images/bg/bg_kv_mo.gif") no-repeat;
+        background-size: cover;
+
+        .inner-section {
+            padding: 23.88889vw 0 0;
+        }
 
         .area-section-tit {
-            padding: 23.88889vw 0 0;
             text-align: center;
         }
 
-        .txt-info {
-            @include vw-mo(margin-top, 20);
-        }
-
-        .info-summary {
+        .box-txt {
+            @include vw-mo(margin-top, 40);
             @include vw-mo(font-size, 30);
-            @include vw-mo(line-height, 42);
-        }
-
-        .info-date {
-            @include vw-mo(margin-top, 20);
-            @include vw-mo(font-size, 30);
+    
+            .txt-date {
+                @include vw-mo(margin-top, 40);
+            }
         }
     }
+
+    .section-buy {
+
+        .inner-section {
+            padding: 18.05556vw 9.72222vw;
+        }
+        
+        .area-section-tit {
+            .section-tit {
+                @include vw-mo(font-size, 48);
+                line-height: 1.25;
+                letter-spacing: -0.05em;
+
+                &:before {
+                    display: none;
+                }
+
+                em {
+                    &:before {
+                        @include vw-mo(width, 207);
+                        @include vw-mo(height, 102);
+                    }
+                }
+            }
+        }
+
+        .area-section-cont {
+            @include vw-mo(padding-top, 230);
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .box-buy {
+            width: 100%;
+            margin-left: 0;
+
+            .box-cont-tit {
+                position: absolute;
+                @include vw-mo(top, 90);
+                right: 0;
+                left: 0;
+                text-align: center;
+
+                .cont-tit {
+                    @include vw-mo(font-size, 60);
+                    line-height: 1.1;
+
+                    &:after {
+                        top: -35%;
+                        right: -13%;
+                        @include vw-mo(width, 55);
+                        @include vw-mo(height, 59);
+                    }
+                }
+
+                .txt-model {
+                    @include vw-mo(margin-top, 10);
+                    @include vw-mo(font-size, 26);
+                }
+            }
+
+            .box-buy-option {
+                flex-wrap: nowrap;
+
+                .item-option {
+                    @include vw-mo(width, 130);
+                    @include vw-mo(height, 130);
+
+                    .label-option {
+                        @include vw-mo(padding, 10);
+                        @include vw-mo(border-width, 2);
+
+                        .option-img {
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .txt-option {
+                            position: absolute;
+                            bottom: -30%;
+                            margin-left: 0;
+                            font-weight: normal;
+                            @include vw-mo(font-size, 30);
+                            line-height: 0.9;
+                        }
+                    }
+
+                    .inp-comm {
+                        &:checked {
+                            + .label-option {
+                                .txt-option {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .box-buy-price {
+                @include vw-mo(margin-top, 90);
+
+                .item-price {
+                    .txt-price {
+                        @include vw-mo(font-size, 28);
+                        line-height: 1.2;
+
+                        em {
+                            @include vw-mo(font-size, 32);
+                        }
+                    }
+
+                    +.item-price {
+                        @include vw-mo(margin-top, 20);
+                    }
+                }
+
+                &:after {
+                    @include vw-mo(height, 2);
+                    @include vw-mo(margin-top, 30);
+                }
+            }
+
+            .link-buy {
+                @include vw-mo(margin-top, 30);
+                padding: 3.47222vw 0;
+                @include vw-mo(border-radius, 44);
+                @include vw-mo(font-size, 30);
+                line-height: 1.3;
+                letter-spacing: -.025em;
+            }
+
+            .box-buy-benefit  {
+                @include vw-mo(margin-top, 50);
+
+                .benefit-tit {
+                    @include vw-mo(font-size, 30);
+                    line-height: 1.4;
+
+                    &:after {
+                        @include vw-mo(width, 275);
+                        background-color: #000;
+                    }
+                }
+
+                .benefit-list {
+                    @include vw-mo(margin-top, 30);
+
+                    .box-img {
+                        @include vw-mo(width, 130);
+                        @include vw-mo(height, 130);
+                    }
+
+                    .benefit-txt {
+                        padding: 0 6%;
+                        font-weight: normal;
+                        @include vw-mo(font-size, 20);
+                        line-height: 1.3;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .box-buy-slide {
+            display: none;
+        }
+    }
+
+}
+
+/* 1920px 이하 */
+@media screen and (max-width: 1920) {
 
 }
