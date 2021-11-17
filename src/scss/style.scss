@@ -181,7 +181,7 @@
                     z-index: -1;
                     @include vw-pc(width, 268);
                     @include vw-pc(height, 132);
-                    background: url(/images/bg/bg_buy_deco01.png) no-repeat;
+                    background: url(../images/bg/bg_buy_deco01.png) no-repeat;
                     background-size: cover;
                 }
             }
@@ -193,7 +193,7 @@
                 left: -1%;
                 @include vw-pc(width, 62);
                 @include vw-pc(height, 56);
-                background: url(/images/bg/bg_buy_deco05.png) no-repeat;
+                background: url(../images/bg/bg_buy_deco05.png) no-repeat;
                 background-size: cover;
             }
         }
@@ -227,7 +227,7 @@
                     right: -30%;
                     @include vw-pc(width, 81);
                     @include vw-pc(height, 89);
-                    background: url(/images/bg/bg_buy_deco03.png) no-repeat;
+                    background: url(../images/bg/bg_buy_deco03.png) no-repeat;
                     background-size: cover;
                 }
             }
@@ -412,7 +412,7 @@
                 @include vw-pc(left, -39);
                 @include vw-pc(width, 155);
                 @include vw-pc(height, 151);
-                background: url(/images/bg/bg_buy_deco02.png) no-repeat;
+                background: url(../images/bg/bg_buy_deco02.png) no-repeat;
                 background-size: cover;
             }
 
@@ -424,7 +424,7 @@
                 z-index: 1;
                 @include vw-pc(width, 242);
                 @include vw-pc(height, 222);
-                background: url(/images/bg/bg_buy_deco04.png) no-repeat;
+                background: url(../images/bg/bg_buy_deco04.png) no-repeat;
                 background-size: cover;
             }
         }
@@ -585,7 +585,7 @@
                 right: -15%;
                 @include vw-pc(width, 54);
                 @include vw-pc(height, 73);
-                background: url(/images/bg/bg_benefit_deco01.png) no-repeat;
+                background: url(../images/bg/bg_benefit_deco01.png) no-repeat;
                 background-size: cover;
             }
         }
@@ -644,6 +644,7 @@
         justify-content: space-between;
 
         li {
+            display: flex;
             @include vw-pc(margin-top, 128);
             @include vw-pc(padding-bottom, 26);
             background: url("../images/bg/bg_benefit_shadow.png") no-repeat;
@@ -655,8 +656,6 @@
             display: flex;
             position: relative;
             @include vw-pc(width, 710);
-            height: 100%;
-            margin: 0 auto;
             padding: 5.55556vw 0;
             border: solid #fff;
             @include vw-pc(border-width, 13);
