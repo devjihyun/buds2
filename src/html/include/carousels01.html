@@ -1,59 +1,59 @@
 <div class="container-slide">
 
-    <div class="inner-slide">
-        <div role="navigation" aria-label="슬라이드 페이지 탐색">
-            <ul class="list-page">
+    <div class="slide-inner">
+        <div class="slide-pagination" role="navigation" aria-label="슬라이드 페이지 탐색">
+            <ul class="slide-page-list">
                 <li>
-                    <button class="btn-page btn-active" type="button" aria-label="1번 슬라이드 이동" aria-current="true"></button><!-- 선택 시 .btn-active 클래스 및 aria-current="true" 추가 -->
+                    <button class="page-btn active-btn" type="button" aria-label="1번 슬라이드 이동" aria-current="true"></button><!-- 선택 시 .active-btn 클래스 및 aria-current="true" 추가 -->
                 </li>
                 <li>
-                    <button class="btn-page" type="button" aria-label="2번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button" aria-label="2번 슬라이드 이동"></button>
                 </li>
                 <li>
-                    <button class="btn-page" type="button" aria-label="3번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button" aria-label="3번 슬라이드 이동"></button>
                 </li>
                 <li>
-                    <button class="btn-page" type="button" aria-label="4번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button" aria-label="4번 슬라이드 이동"></button>
                 </li>
                 <li>
-                    <button class="btn-page" type="button" aria-label="5번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button" aria-label="5번 슬라이드 이동"></button>
                 </li>
                 <li>
-                    <button class="btn-page" type="button"  aria-label="6번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button"  aria-label="6번 슬라이드 이동"></button>
                 </li>
                 <li>
-                    <button class="btn-page" type="button" aria-label="7번 슬라이드 이동"></button>
+                    <button class="page-btn" type="button" aria-label="7번 슬라이드 이동"></button>
                 </li>
             </ul>
         </div>
 
-        <div class="box-slide-track" aria-live="polite" style="width:49000px;transform:translate3d(0px, 0px, 0px)"><!-- width값 임시적용, 슬라이드 가로폭(.box-item * 슬라이드 개수) 개발 시 적용, .box-item 하나의 너비 만큼 x축 음수 이동 -->
-            <div class="box-item" aria-label="7개 중 1번 슬라이드">
-                <img src="images/contents/img_slide_lavender01.png" class="slide-img" alt="라벤더 버즈2 + 노티드 커버">
+        <div class="slide-track" aria-live="polite" style="width:49000px;transform:translate3d(0px, 0px, 0px)"><!-- width값 임시적용, 슬라이드 가로폭(.wrap-img * 슬라이드 개수) 개발 시 적용, .wrap-img 하나의 너비 만큼 -x축 이동 -->
+            <div class="wrap-img" aria-label="7개 중 1번 슬라이드">
+                <img src="images/contents/img_slide_lavender01.png" class="img-comm" alt="라벤더 버즈2 + 노티드 커버">
             </div>
-            <div class="box-item" aria-label="7개 중 2번 슬라이드">
-                <img src="images/contents/img_slide_lavender02.png" class="slide-img" alt="라벤더 버즈2 케이스 열림">
+            <div class="wrap-img" aria-label="7개 중 2번 슬라이드">
+                <img src="images/contents/img_slide_lavender02.png" class="img-comm" alt="라벤더 버즈2 케이스 열림">
             </div>
-            <div class="box-item" aria-label="7개 중 3번 슬라이드">
-                <img src="images/contents/img_slide_lavender03.png" class="slide-img" alt="라벤더 버즈2 이어버드">
+            <div class="wrap-img" aria-label="7개 중 3번 슬라이드">
+                <img src="images/contents/img_slide_lavender03.png" class="img-comm" alt="라벤더 버즈2 이어버드">
             </div>
-            <div class="box-item" aria-label="7개 중 4번 슬라이드">
-                <img src="images/contents/img_slide_lavender04.png" class="slide-img" alt="라벤더 버즈2 이어버드">
+            <div class="wrap-img" aria-label="7개 중 4번 슬라이드">
+                <img src="images/contents/img_slide_lavender04.png" class="img-comm" alt="라벤더 버즈2 이어버드">
             </div>
-            <div class="box-item" aria-label="7개 중 5번 슬라이드">
-                <img src="images/contents/img_slide_lavender05.png" class="slide-img" alt="라벤더 버즈2 케이스 닫힘">
+            <div class="wrap-img" aria-label="7개 중 5번 슬라이드">
+                <img src="images/contents/img_slide_lavender05.png" class="img-comm" alt="라벤더 버즈2 케이스 닫힘">
             </div>
-            <div class="box-item" aria-label="7개 중 6번 슬라이드">
-                <img src="images/contents/img_slide_cover01.png" class="slide-img" alt="노티드 커버 측면">
+            <div class="wrap-img" aria-label="7개 중 6번 슬라이드">
+                <img src="images/contents/img_slide_cover01.png" class="img-comm" alt="노티드 커버 측면">
             </div>
-            <div class="box-item" aria-label="7개 중 7번 슬라이드">
-                <img src="images/contents/img_slide_cover02.png" class="slide-img" alt="노티드 커버 정면">
+            <div class="wrap-img" aria-label="7개 중 7번 슬라이드">
+                <img src="images/contents/img_slide_cover02.png" class="img-comm" alt="노티드 커버 정면">
             </div>
         </div>
     </div>
 
-    <div class="box-btn-control" role="group">
-        <button class="btn-prev" type="button"><span class="visually-hidden">이전 슬라이드 이동</span></button>
-        <button class="btn-next" type="button"><span class="visually-hidden">다음 슬라이드 이동</span></button>
+    <div class="slide-btn-wrap" role="group">
+        <button class="prev-btn" type="button"><span class="txt-hide">이전 슬라이드 이동</span></button>
+        <button class="next-btn" type="button"><span class="txt-hide">다음 슬라이드 이동</span></button>
     </div>
 </div>
