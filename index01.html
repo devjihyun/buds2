@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, target-densitydpi=medium-dpi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Galaxy Buds2 with Knotted | 삼성닷컴</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -101,7 +100,9 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <a href="#none" class="link-comm02 buy-link" aria-describedby="model01 option01">지금 구매하기</a><!-- aria-describedby로 모델명(.txt-model), 옵션명(.option-txt) 연결 -->
+                                    <div class="option-buy-link">
+                                        <a href="#none" class="link-comm02 buy-link" aria-describedby="model01 option01">지금 구매하기</a><!-- aria-describedby로 모델명(.txt-model), 옵션명(.option-txt) 연결 -->
+                                    </div>
                                 </fieldset>
                             </div>
                             <div class="buy-benefit-wrap">
@@ -111,26 +112,26 @@
                                         <span class="wrap-img">
                                             <img src="images/contents/img_benefit_s01.gif" class="img-comm" alt="">
                                         </span>
-                                        <span class="wrap-txt" role="text">갤럭시 버즈2 <br>노티드 커버 증정</span>
+                                        <span class="benefit-txt" role="text">갤럭시 버즈2 <br>노티드 커버 증정</span>
                                     </li>
                                     <li>
                                         <span class="wrap-img">
                                             <img src="images/contents/img_benefit_s02.gif" class="img-comm" alt="">
                                         </span>
-                                        <span class="wrap-txt" role="text">삼성케어플러스 <br>20% 할인 쿠폰</span>
+                                        <span class="benefit-txt" role="text">삼성케어플러스 <br>20% 할인 쿠폰</span>
                                     </li>
                                     <li>
                                         <span class="wrap-img">
                                             <img src="images/contents/img_benefit_s03.gif" class="img-comm" alt="">
                                         </span>
-                                        <span class="wrap-txt" role="text">스타벅스 <br>기프티콘 2매</span>
+                                        <span class="benefit-txt" role="text">스타벅스 <br>기프티콘 2매</span>
                                     </li>
                                     <li>
-                                        <a href="#none" class="more-link">
+                                        <a href="#none" class="benefit-more-link">
                                             <span class="wrap-img">
                                                 <img src="images/contents/img_benefit_s04.gif" class="img-comm" alt="">
                                             </span>
-                                            <span class="wrap-txt" role="text">더 많은 혜택 <br>알아보기</span>
+                                            <span class="benefit-txt" role="text">더 많은 혜택 <br>알아보기</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -139,7 +140,7 @@
                         <div class="section-cont cont-swiper">
                             <strong class="txt-hide">옵션 상세 이미지 슬라이드</strong>
                             <div class="swiper-box">
-    <div class="swiper-container swiper-container01">
+    <div class="swiper-container buy-swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" aria-label="7개 중 1번 슬라이드">
                 <div class="wrap-img">
@@ -288,7 +289,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section-prm section-product">
+
+            <section class="section-prm section-pod">
                 <div class="section-inner">
                     <div class="section-tit-area">
                         <h2 class="section-tit">작고 귀엽고 강력하다</h2>
@@ -297,7 +299,7 @@
                         <div class="section-cont">
                             <strong class="txt-hide">제품 특징 설명 슬라이드</strong>
                             <div class="swiper-box">
-    <div class="swiper-container swiper-container02">
+    <div class="swiper-container pod-swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="wrap-img">
@@ -393,13 +395,51 @@
                     </div>
                 </div>
             </section>
+
             <section class="section-prm section-others">
                 <div class="section-inner">
                     <div class="section-tit-area">
                         <h2 class="section-tit">또 다른 Galaxy를 만나보세요</h2>
                     </div>
+                    <div class="section-cont-area">
+                        <div class="section-cont">
+                            <strong class="txt-hide">추천 링크 목록</strong>
+                            <div class="swiper-container others-swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="wrap-img">
+                <img src="images/contents/img_others01.gif" alt="" class="img-comm">
+            </div>
+            <div class="others-txt-wrap">
+                <h3 class="others-tit">Galaxy Z Flip3 5G</h3>
+                <a href="#none" class="link-comm02 others-link">구매 혜택 보기</a>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="wrap-img">
+                <img src="images/contents/img_others02.gif" alt="" class="img-comm">
+            </div>
+            <div class="others-txt-wrap">
+                <h3 class="others-tit">Galaxy Watch4</h3>
+                <a href="#none" class="link-comm02 others-link">구매 혜택 보기</a>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="wrap-img">
+                <img src="images/contents/img_others03.gif" alt="" class="img-comm">
+            </div>
+            <div class="others-txt-wrap">
+                <h3 class="others-tit">온라인 체험존</h3>
+                <a href="#none" class="link-comm02 others-link">입장하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section id="notice" class="section-prm section-notice">
                 <div class="section-inner">
                     <h2 class="txt-hide">혜택 유의사항</h2>
