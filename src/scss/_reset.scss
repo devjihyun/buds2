@@ -21,6 +21,6 @@ input[type="search"] {width:100%; vertical-align:middle; height:36px; font-size:
 -webkit-appearance:none; background:#f7fbff;}
 input[type="checkbox"] {vertical-align:middle; -webkit-border-radius:0;}
 input[type="radio"] {vertical-align:middle;}
-button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"]{-webkit-appearance:button;border:0;border-radius:0;cursor: pointer;}
+button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"],[role="button"]{-webkit-appearance:none;border:0;border-radius:0;cursor: pointer;}
 textarea {width:100%; padding:10px; line-height:24px; box-sizing:border-box; resize:none; border:1px solid #bfc7ce; border-radius:2px; -webkit-appearance:none;}
 select {vertical-align:middle; -webkit-appearance:none; min-width:150px; padding:0 42px 0 7px; color:#505562; font-size:15px; line-height:32px; border:1px solid #bfc7ce; border-radius:2px;}
