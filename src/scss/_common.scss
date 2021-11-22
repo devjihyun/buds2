@@ -1,0 +1,130 @@
+/* common */
+
+.hide-txt {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.wrap-txt {
+    display: block;
+}
+
+.wrap-img {
+    display: block;
+}
+
+.comm-img {
+    width: 100%;
+}
+
+.pc-img {
+    width: 100%;
+}
+
+.mobile-img {
+    display: none;
+    width: 100%;
+}
+
+.comm-ico {
+    display: inline-block;
+    overflow: hidden;
+    color: transparent;
+    vertical-align: top;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+}
+
+.direct-ico {
+    @include vw-pc(width, 18);
+    @include vw-pc(height, 18);
+    background-image: url(/images/icon/external_link.svg);
+}
+
+.down-arrow-ico {
+    @include vw-pc(width, 24);
+    @include vw-pc(height, 24);
+    background-image: url(/images/icon/arrow_down.svg);
+}
+
+.comm-link {
+    display: inline-flex;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    @include vw-pc(font-size, 16);
+    line-height: 1.5;
+    color: #000;
+    align-items: center;
+
+    .direct-ico {
+        @include vw-pc(margin-left, 5);
+    }
+}
+
+.comm-link02 {
+    display: block;
+    padding: 0.55556vw 1.38889vw;
+    @include vw-pc(border-radius, 16.5);
+    font-weight: bold;
+    @include vw-pc(font-size, 15);
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.swiper-container {
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .hide-mobile {
+        display: none;
+    }
+    
+    .pc-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+    }
+
+    .comm-link {
+        font-weight: bold;
+        @include vw-mo(font-size, 18);
+    }
+
+    .comm-link02 {
+        font-weight: normal;
+        padding: 2.08333vw 2.77778vw;
+        @include vw-mo(border-radius, 26);
+        @include vw-mo(font-size, 18);
+    }
+
+    .direct-ico {
+        @include vw-mo(width, 15);
+        @include vw-mo(height, 15);
+        background-image: url(/images/icon/external_link_m.svg);
+    }
+
+    .down-arrow-ico {
+        @include vw-mo(width, 24);
+        @include vw-mo(height, 24);
+    }
+}

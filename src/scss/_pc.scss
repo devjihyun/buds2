@@ -39,68 +39,6 @@
     min-width: 320px;
 }
 
-/* common */
-.txt-hide {
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    white-space: nowrap;
-}
-
-.wrap-txt {
-    display: block;
-}
-
-.wrap-img {
-    display: block;
-}
-
-.img-comm {
-    width: 100%;
-}
-
-.img-pc {
-    width: 100%;
-}
-
-.img-mobile {
-    display: none;
-    width: 100%;
-}
-
-.link-comm {
-    display: inline-block;
-    border-bottom: 1px solid #000;
-    @include vw-pc(font-size, 15);
-    line-height: 1.5;
-    color: #000;
-    vertical-align: top;
-}
-
-.link-comm02 {
-    display: block;
-    padding: 0.55556vw 1.38889vw;
-    @include vw-pc(border-radius, 16.5);
-    font-weight: bold;
-    @include vw-pc(font-size, 15);
-    line-height: 1.5;
-    letter-spacing: -0.05em;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-.swiper-container {
-    overflow: hidden;
-    position: relative;
-}
-
 /* content */
 .section-prm {
     max-width: 1920px;
@@ -392,22 +330,10 @@
             .benefit-more-link {
                 display: block;
 
-                .benefit-txt {
-                    position: relative;
-                    padding-left: 16%;
-                    text-align: left;
-
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        right: 25%;
-                        bottom: 20%;
-                        @include vw-pc(width, 6);
-                        @include vw-pc(height, 6);
-                        border-right: 1px solid #000;
-                        border-bottom: 1px solid #000;
-                        transform: rotate(45deg);
-                    }
+                .down-arrow-ico {
+                    @include vw-pc(width, 23);
+                    @include vw-pc(height, 23);
+                    @include vw-pc(margin-top, -3);
                 }
             }
         }
@@ -567,7 +493,7 @@
 
     .section-inner {
         max-width: 1470px;
-        @include vw-pc(padding-bottom, 120);
+        padding: 9.02778vw 0;
     }
 
     .section-tit-area {
@@ -609,6 +535,7 @@
 
         .notice-txt {
             display: block;
+            font-weight: normal;
             @include vw-pc(font-size, 17);
             line-height: 1.6;
             letter-spacing: -0.025em;
@@ -620,6 +547,8 @@
     }
 
     .section-cont-area {
+        @include vw-pc(padding-top, 40);
+
 
         .cont-tit-wrap {
             @include vw-pc(margin-left, 15);
@@ -699,6 +628,10 @@
             background: url("../images/bg/bg_benefit_deco03.png") no-repeat;
             background-size: cover;
         }
+
+        .benefit-item-inner {
+            display: flex;
+        }
     }
 
     .wrap-img {
@@ -721,6 +654,12 @@
             }
         }
 
+        .benefit-tit-inner {
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
         .benefit-txt {
             display: block;
             @include vw-pc(margin-top, 15);
@@ -735,10 +674,10 @@
             @include vw-pc(margin-top, 30);
             align-items: center;
 
-
-
-            .link-comm02 {
-                @include vw-pc(margin-left, 20);
+            a {
+                + a {
+                    @include vw-pc(margin-left, 20);
+                }
             }
         }
     }
@@ -773,7 +712,6 @@
 
         .wrap-img {
             @include vw-pc(width, 238);
-            // @include vw-pc(height, 161);
         }
 
         .benefit-tit {
@@ -800,7 +738,7 @@
             }
         }
 
-        .link-comm {
+        .direct-link {
             @include vw-pc(margin-top, 20);
         }
     }
@@ -810,7 +748,6 @@
 
         .wrap-img {
             @include vw-pc(width, 267);
-            // @include vw-pc(height, 207);
         }
 
         .benefit-tit {
@@ -836,11 +773,6 @@
                 @include vw-pc(height, 54);
                 background: url("../images/bg/bg_benefit_deco06_2.png") no-repeat;
                 background-size: cover;
-            }
-
-            .wrap-txt {
-                position: relative;
-                z-index: 1;
             }
         }
     }
@@ -879,6 +811,7 @@
         }
 
         .notice-link {
+            position: relative;
             @include vw-pc(margin-top, 50);
             font-weight: bold;
             @include vw-pc(font-size, 18);
