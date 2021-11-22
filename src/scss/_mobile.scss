@@ -96,7 +96,7 @@
                 }
             }
 
-            .model-txt {
+            .model-name {
                 @include vw-mo(margin-top, 10);
                 @include vw-mo(font-size, 26);
             }
@@ -212,7 +212,7 @@
                 }
 
                 .benefit-more-link {
-                    .down-arrow-ico {
+                    .ico-arr-down {
                         @include vw-mo(width, 24);
                         @include vw-mo(height, 24);
                     }
@@ -228,7 +228,7 @@
         .swiper-box {
             @include vw-mo(width, 580);
             @include vw-mo(height, 500);
-            
+
             &:after {
                 @include vw-mo(top, -45);
                 @include vw-mo(left, -30);
@@ -268,25 +268,14 @@
             button {
                 @include vw-mo(width, 60);
                 @include vw-mo(height, 60);
-
-                &:after {
-                    @include vw-mo(padding, 20);
-                }
             }
 
             .swiper-button-prev {
                 @include vw-mo(left, 20);
-
-                &:after {
-                    @include vw-mo(right, 0);
-                }
             }
 
             .swiper-button-next {
                 @include vw-mo(right, 20);
-                &:after {
-                    @include vw-mo(left, 0);
-                }
             }
         }
 
@@ -300,7 +289,7 @@
         }
 
         .section-tit-area {
-            
+
             .section-tit {
                 @include vw-mo(font-size, 32);
                 line-height: 2.2;
@@ -326,10 +315,6 @@
                 @include vw-mo(font-size, 20);
                 color: rgba($color: #000000, $alpha: 0.8);
                 letter-spacing: -0.025em;
-
-                &:first-of-type {
-                    padding: 0 17.6%;
-                }
             }
         }
 
@@ -464,7 +449,7 @@
                 justify-content: center;
 
                 a {
-                    + a {
+                    +a {
                         @include vw-mo(margin-left, 60);
                     }
                 }
@@ -531,13 +516,21 @@
             }
         }
 
+        .swiper-pagination-wrap {
+            @include vw-mo(margin-top, 5);
+            align-items: center;
+        }
+
         .swiper-pagination {
-            top: 42%;
             bottom: auto;
 
-            .page-txt {
+            .page-name {
                 display: none;
             }
+        }
+
+        .swiper-pagination-bullet {
+            padding: 10px 0;
         }
 
         .swiper-button-wrap {
@@ -549,12 +542,7 @@
     .section-others {
 
         .section-inner {
-            padding-top: 0;
             @include vw-mo(padding-bottom, 130);
-        }
-
-        .swiper-container {
-            // @include vw-mo(padding-left, 70);
         }
 
         .section-tit {
@@ -566,7 +554,7 @@
         }
 
         .swiper-slide {
-            @include vw-mo(width, 366);
+            @include vw-mo(width, 400);
             @include vw-mo(margin-left, 35);
 
             &:first-child {
@@ -575,6 +563,55 @@
 
             &:last-child {
                 @include vw-mo(padding-right, 70);
+            }
+        }
+
+        .others-link-area {
+
+            .others-tit {
+                @include vw-mo(font-size, 30);
+            }
+
+            .others-link {
+                @include vw-mo(width, 197);
+                @include vw-mo(margin-top, 66);
+                @include vw-mo(border-radius, 30);
+                @include vw-mo(font-size, 22);
+            }
+        }
+    }
+
+    .section-notice {
+        .notice-item {
+            flex-direction: column;
+        }
+
+        .notice-list-wrap {
+            @include vw-mo(margin-top, 30);
+            padding-left: 0;
+        }
+
+        .notice-tit-wrap {
+            width: 100%;
+        }
+
+        .notice-tit {
+            @include vw-mo(font-size, 24);
+        }
+
+        .notice-list {
+            @include vw-mo(font-size, 24);
+            line-height: 1.6;
+            word-break: break-all;
+
+            li {
+                @include vw-mo(padding-left, 15);
+
+                &:before {
+                    @include vw-mo(width, 6);
+                    @include vw-mo(height, 6);
+                    border-radius: 0;
+                }
             }
         }
     }

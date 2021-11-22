@@ -32,17 +32,25 @@ var swiper = new Swiper(
     }
 });
 
+let names = ['디자인', '착용감', '사운드', '통화품질'];
+
 var swiper = new Swiper(
     '.pod-swiper-container', {
 	direction: 'horizontal',
     loop: true,
 
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-        return '<span class="' + className + '">' +  (menu[index]) + '</span>';
-        }
+            return '<div class="' + className + '">' + '<span class="page-name">' + (names[index]) + '</span>' +
+            '<div class="progress-bar">' + '<div class="progress-bar-inner">' + '</div>' + '</div>' + '</div>';
+        },
     },
     
 

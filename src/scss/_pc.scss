@@ -122,7 +122,7 @@
                     z-index: -1;
                     @include vw-pc(width, 268);
                     @include vw-pc(height, 132);
-                    background: url(../images/bg/bg_buy_deco01.png) no-repeat;
+                    background: url(../images/bg/deco_buy01.png) no-repeat;
                     background-size: cover;
                 }
             }
@@ -134,7 +134,7 @@
                 left: -1%;
                 @include vw-pc(width, 62);
                 @include vw-pc(height, 56);
-                background: url(../images/bg/bg_buy_deco05.png) no-repeat;
+                background: url(../images/bg/deco_buy05.png) no-repeat;
                 background-size: cover;
             }
         }
@@ -169,12 +169,12 @@
                 right: -30%;
                 @include vw-pc(width, 81);
                 @include vw-pc(height, 89);
-                background: url(../images/bg/bg_buy_deco03.png) no-repeat;
+                background: url(../images/bg/deco_buy03.png) no-repeat;
                 background-size: cover;
             }
         }
 
-        .model-txt {
+        .model-name {
             display: block;
             @include vw-pc(font-size, 16);
         }
@@ -330,7 +330,7 @@
             .benefit-more-link {
                 display: block;
 
-                .down-arrow-ico {
+                .ico-arr-down {
                     @include vw-pc(width, 23);
                     @include vw-pc(height, 23);
                     @include vw-pc(margin-top, -3);
@@ -350,7 +350,7 @@
         @include vw-pc(height, 740);
         margin: 0 auto;
         @include vw-pc(padding-bottom, 32);
-        background: url("../images/bg/bg_slide_pc.png") no-repeat;
+        background: url("../images/bg/deco_buy06.png") no-repeat;
         background-position: center bottom;
         background-size: 100%;
 
@@ -361,7 +361,7 @@
             @include vw-pc(left, -39);
             @include vw-pc(width, 155);
             @include vw-pc(height, 151);
-            background: url(../images/bg/bg_buy_deco02.png) no-repeat;
+            background: url(../images/bg/deco_buy02.png) no-repeat;
             background-size: cover;
         }
 
@@ -373,7 +373,7 @@
             z-index: 1;
             @include vw-pc(width, 242);
             @include vw-pc(height, 222);
-            background: url(../images/bg/bg_buy_deco04.png) no-repeat;
+            background: url(../images/bg/deco_buy04.png) no-repeat;
             background-size: cover;
         }
     }
@@ -453,42 +453,20 @@
             @include vw-pc(width, 60);
             @include vw-pc(height, 60);
             background-color: transparent;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 25%;
-                @include vw-pc(padding, 14);
-                border: solid black;
-                border-top-width: 0;
-                @include vw-pc(border-right-width, 2);
-                @include vw-pc(border-bottom-width, 2);
-                border-left-width: 0;
-            }
         }
 
         .swiper-button-prev {
             @include vw-pc(left, -60);
-
-            &:after {
-                right: 15%;
-                transform: rotate(135deg);
-            }
         }
 
         .swiper-button-next {
             @include vw-pc(right, -60);
-
-            &:after {
-                left: 15%;
-                transform: rotate(-45deg);
-            }
         }
     }
 }
 
 .section-benefit {
-    background: url("../images/bg/bg_benefit_pc.gif") no-repeat;
+    background: url("../images/bg/bg_benefit.gif") no-repeat;
     background-size: cover;
 
     .section-inner {
@@ -521,7 +499,7 @@
                 right: -15%;
                 @include vw-pc(width, 54);
                 @include vw-pc(height, 73);
-                background: url(../images/bg/bg_benefit_deco01.png) no-repeat;
+                background: url(../images/bg/deco_benefit01.png) no-repeat;
                 background-size: cover;
             }
         }
@@ -585,7 +563,7 @@
             width: 48.30%;
             @include vw-pc(margin-top, 128);
             @include vw-pc(padding-bottom, 26);
-            background: url("../images/bg/bg_benefit_shadow.png") no-repeat;
+            background: url("../images/bg/deco_benefit10.png") no-repeat;
             background-position: center bottom;
             background-size: 100%;
         }
@@ -613,7 +591,7 @@
             @include vw-pc(width, 120);
             @include vw-pc(height, 120);
             @include vw-pc(margin-left, -60);
-            background: url("../images/bg/bg_benefit_deco02.png") no-repeat;
+            background: url("../images/bg/deco_benefit02.png") no-repeat;
             background-size: cover;
         }
 
@@ -625,7 +603,7 @@
             @include vw-pc(width, 177);
             @include vw-pc(height, 112);
             @include vw-pc(margin-left, -88);
-            background: url("../images/bg/bg_benefit_deco03.png") no-repeat;
+            background: url("../images/bg/deco_benefit03.png") no-repeat;
             background-size: cover;
         }
 
@@ -699,7 +677,7 @@
                 bottom: -10%;
                 @include vw-pc(width, 215);
                 @include vw-pc(height, 42);
-                background: url("../images/bg/bg_benefit_deco04.png") no-repeat;
+                background: url("../images/bg/deco_benefit04.png") no-repeat;
                 background-size: cover;
             }
         }
@@ -722,7 +700,7 @@
                 bottom: -25%;
                 @include vw-pc(width, 165);
                 @include vw-pc(height, 21);
-                background: url("../images/bg/bg_benefit_deco05_1.png") no-repeat;
+                background: url("../images/bg/deco_benefit05.png") no-repeat;
                 background-size: cover;
             }
 
@@ -733,7 +711,7 @@
                 right: -35%;
                 @include vw-pc(width, 46);
                 @include vw-pc(height, 49);
-                background: url("../images/bg/bg_benefit_deco05_2.png") no-repeat;
+                background: url("../images/bg/deco_benefit06.png") no-repeat;
                 background-size: cover;
             }
         }
@@ -760,7 +738,7 @@
                 right: 10%;
                 @include vw-pc(width, 54);
                 @include vw-pc(height, 45);
-                background: url("../images/bg/bg_benefit_deco06_1.png") no-repeat;
+                background: url("../images/bg/deco_benefit07.png") no-repeat;
                 background-size: cover;
             }
 
@@ -771,7 +749,7 @@
                 left: -5%;
                 @include vw-pc(width, 157);
                 @include vw-pc(height, 54);
-                background: url("../images/bg/bg_benefit_deco06_2.png") no-repeat;
+                background: url("../images/bg/deco_benefit08.png") no-repeat;
                 background-size: cover;
             }
         }
@@ -794,7 +772,7 @@
                 bottom: -10%;
                 @include vw-pc(width, 187);
                 @include vw-pc(height, 23);
-                background: url("../images/bg/bg_benefit_deco07.png") no-repeat;
+                background: url("../images/bg/deco_benefit09.png") no-repeat;
                 background-size: cover;
             }
         }
@@ -901,25 +879,31 @@
         }
     }
 
+    .swiper-pagination-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
     .swiper-pagination {
         display: flex;
-        flex-direction: row;
+        position: relative;
         right: 0;
         bottom: 0;
         left: 0;
+        flex-direction: row;
         justify-content: center;
     }
 
     .swiper-pagination-bullet {
         @include vw-pc(width, 147);
         @include vw-pc(margin-left, 15);
-        @include vw-pc(padding-bottom, 5);
+        @include vw-pc(padding-bottom, 38);
 
         &:first-of-type {
             margin-left: 0;
         }
 
-        .page-txt {
+        .page-name {
             display: block;
             padding: .625vw 0;
             font-weight: bold;
@@ -947,17 +931,17 @@
     }
 
     .swiper-pagination-bullet-active {
-        .page-txt {
+        .page-name {
             color: #000;
         }
 
         .progress-bar-inner {
-            animation-name: slide-progress;
+            animation-name: swiper-progress;
             animation-duration: 3s
         }
     }
 
-    @keyframes slide-progress {
+    @keyframes swiper-progress {
         from {
             width: 0
         }
@@ -965,6 +949,10 @@
         to {
             width: 100%
         }
+    }
+
+    .page-control-btn {
+        margin-left: 10px;
     }
 
     .swiper-button-wrap {
@@ -977,41 +965,23 @@
             @include vw-pc(width, 60);
             @include vw-pc(height, 60);
             background-color: transparent;
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 25%;
-                @include vw-pc(padding, 14);
-                border: solid black;
-                border-top-width: 0;
-                @include vw-pc(border-right-width, 2);
-                @include vw-pc(border-bottom-width, 2);
-                border-left-width: 0;
-            }
         }
 
         .swiper-button-prev {
             left: 0;
-
-            &:after {
-                right: 15%;
-                transform: rotate(135deg);
-            }
         }
 
         .swiper-button-next {
             right: 0;
-
-            &:after {
-                left: 15%;
-                transform: rotate(-45deg);
-            }
         }
     }
 }
 
 .section-others {
+
+    .section-inner {
+        @include vw-pc(padding-bottom, 130);
+    }
 
     .section-cont-area {
         @include vw-pc(margin-top, 67);
@@ -1026,7 +996,7 @@
     }
 
     .swiper-slide {
-        @include vw-pc(width, 387);
+        @include vw-pc(width, 241);
         height: auto;
         @include vw-pc(margin-left, 40);
 
@@ -1035,7 +1005,7 @@
         }
     }
 
-    .others-txt-wrap {
+    .others-link-area {
         @include vw-pc(margin-top, 15);
         text-align: center;
 
@@ -1069,19 +1039,18 @@
         border-top: 1px solid rgba($color: #fff, $alpha: 0.15);
         padding: 3.47222vw 0;
 
-
-        .notice-tit-wrap {
-            @include vw-pc(width, 145);
-
-        }
-
-        .notice-list-wrap {
-            @include vw-pc(padding-left, 45);
-        }
-
         &:first-child {
             border-top: 0 none;
         }
+    }
+
+    .notice-tit-wrap {
+        @include vw-pc(width, 145);
+
+    }
+
+    .notice-list-wrap {
+        @include vw-pc(padding-left, 45);
     }
 
     .notice-tit {
@@ -1118,19 +1087,19 @@
             color: #a3a3a3;
         }
 
-        .notice-inner-list-tit {
+        .notice-inner-tit {
             @include vw-pc(margin-top, 25);
             &:before {
                 top: 3%;
                 transform: none;
             }
         }
+    }
 
-        &.notice-list02 {
-            .notice-inner-list-tit {
-                &:before {
-                    display: none;
-                }
+    .notice-list02 {
+        li {
+            &:before {
+                display: none;
             }
         }
     }

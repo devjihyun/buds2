@@ -13,6 +13,10 @@
     white-space: nowrap;
 }
 
+.show-mobile {
+    display: none;
+}
+
 .wrap-txt {
     display: block;
 }
@@ -21,20 +25,20 @@
     display: block;
 }
 
-.comm-img {
+.img-comm {
     width: 100%;
 }
 
-.pc-img {
+.img-pc {
     width: 100%;
 }
 
-.mobile-img {
+.img-mobile {
     display: none;
     width: 100%;
 }
 
-.comm-ico {
+.ico-comm {
     display: inline-block;
     overflow: hidden;
     color: transparent;
@@ -45,19 +49,44 @@
     background-size: 100%;
 }
 
-.direct-ico {
+.ico-direct {
     @include vw-pc(width, 18);
     @include vw-pc(height, 18);
-    background-image: url(/images/icon/external_link.svg);
+    background-image: url(/images/icon/ico_direct.svg);
 }
 
-.down-arrow-ico {
+.ico-arr-down {
     @include vw-pc(width, 24);
     @include vw-pc(height, 24);
-    background-image: url(/images/icon/arrow_down.svg);
+    background-image: url(/images/icon/ico_arr_down.svg);
 }
 
-.comm-link {
+.ico-arr-right {
+    @include vw-pc(width, 41);
+    @include vw-pc(height, 41);
+    background-image: url(/images/icon/ico_arr_right.svg);
+}
+
+.ico-arr-left {
+    @include vw-pc(width, 41);
+    @include vw-pc(height, 41);
+    background-image: url(/images/icon/ico_arr_left.svg);
+}
+
+.ico-play {
+    @include vw-mo(width, 14);
+    @include vw-mo(height, 14);
+    background-image: url(/images/icon/ico_play.svg);
+}
+
+.ico-pause {
+    @include vw-mo(width, 14);
+    @include vw-mo(height, 14);
+    background-image: url(/images/icon/ico_pause.svg);
+}
+
+
+.link-comm {
     display: inline-flex;
     border-bottom: 1px solid #000;
     font-weight: bold;
@@ -66,12 +95,12 @@
     color: #000;
     align-items: center;
 
-    .direct-ico {
+    .ico-direct {
         @include vw-pc(margin-left, 5);
     }
 }
 
-.comm-link02 {
+.link-comm02 {
     display: block;
     padding: 0.55556vw 1.38889vw;
     @include vw-pc(border-radius, 16.5);
@@ -96,34 +125,58 @@
     .hide-mobile {
         display: none;
     }
+
+    .show-mobile {
+        display: block;
+    }
     
-    .pc-img {
+    .img-pc {
         display: none;
     }
 
-    .mobile-img {
+    .img-mobile {
         display: block;
     }
 
-    .comm-link {
+    .link-comm {
         font-weight: bold;
         @include vw-mo(font-size, 18);
     }
 
-    .comm-link02 {
+    .link-comm02 {
         font-weight: normal;
         padding: 2.08333vw 2.77778vw;
         @include vw-mo(border-radius, 26);
         @include vw-mo(font-size, 18);
     }
 
-    .direct-ico {
+    .ico-direct {
         @include vw-mo(width, 15);
         @include vw-mo(height, 15);
-        background-image: url(/images/icon/external_link_m.svg);
+        background-image: url(/images/icon/ico_direct_m.svg);
     }
 
-    .down-arrow-ico {
+    .ico-arr-down {
+        @include vw-mo(width, 24);
+        @include vw-mo(height, 24);
+    }
+
+    .ico-arr-right {
+        @include vw-mo(width, 59);
+        @include vw-mo(height, 59);
+    }
+    
+    .ico-arr-left {
+        @include vw-mo(width, 59);
+        @include vw-mo(height, 59);
+    }
+
+    .ico-play {
+        @include vw-mo(width, 24);
+        @include vw-mo(height, 24);
+    }
+
+    .ico-pause {
         @include vw-mo(width, 24);
         @include vw-mo(height, 24);
     }
