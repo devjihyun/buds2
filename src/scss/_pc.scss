@@ -1090,7 +1090,7 @@
         .notice-inner-tit {
             @include vw-pc(margin-top, 25);
             &:before {
-                top: 3%;
+                top: 1vw;
                 transform: none;
             }
         }

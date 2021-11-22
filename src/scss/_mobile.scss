@@ -608,9 +608,17 @@
                 @include vw-mo(padding-left, 15);
 
                 &:before {
+                    top: 2vw;
                     @include vw-mo(width, 6);
                     @include vw-mo(height, 6);
                     border-radius: 0;
+                    transform: none;
+                }
+            }
+
+            .notice-inner-tit {
+                &:before {
+                    top: 2vw;
                 }
             }
         }
