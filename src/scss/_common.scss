@@ -52,37 +52,37 @@
 .ico-direct {
     @include vw-pc(width, 18);
     @include vw-pc(height, 18);
-    background-image: url(/images/icon/ico_direct.svg);
+    background-image: url(../images/icon/ico_direct.svg);
 }
 
 .ico-arr-down {
     @include vw-pc(width, 24);
     @include vw-pc(height, 24);
-    background-image: url(/images/icon/ico_arr_down.svg);
+    background-image: url(../images/icon/ico_arr_down.svg);
 }
 
 .ico-arr-right {
     @include vw-pc(width, 41);
     @include vw-pc(height, 41);
-    background-image: url(/images/icon/ico_arr_right.svg);
+    background-image: url(../images/icon/ico_arr_right.svg);
 }
 
 .ico-arr-left {
     @include vw-pc(width, 41);
     @include vw-pc(height, 41);
-    background-image: url(/images/icon/ico_arr_left.svg);
+    background-image: url(../images/icon/ico_arr_left.svg);
 }
 
 .ico-play {
     @include vw-mo(width, 14);
     @include vw-mo(height, 14);
-    background-image: url(/images/icon/ico_play.svg);
+    background-image: url(../images/icon/ico_play.svg);
 }
 
 .ico-pause {
     @include vw-mo(width, 14);
     @include vw-mo(height, 14);
-    background-image: url(/images/icon/ico_pause.svg);
+    background-image: url(../images/icon/ico_pause.svg);
 }
 
 
@@ -153,7 +153,7 @@
     .ico-direct {
         @include vw-mo(width, 15);
         @include vw-mo(height, 15);
-        background-image: url(/images/icon/ico_direct_m.svg);
+        background-image: url(../images/icon/ico_direct_m.svg);
     }
 
     .ico-arr-down {

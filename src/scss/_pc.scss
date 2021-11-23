@@ -1073,7 +1073,7 @@
             &:before {
                 content: '';
                 position: absolute;
-                top: 50%;
+                top: 1vw;
                 left: 0;
                 @include vw-pc(width, 4);
                 @include vw-pc(height, 4);
