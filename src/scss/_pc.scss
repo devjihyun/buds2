@@ -1094,6 +1094,10 @@
                 transform: none;
             }
         }
+
+        +.notice-list {
+            @include vw-pc(margin-top, 25);
+        }
     }
 
     .notice-list02 {
