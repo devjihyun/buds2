@@ -73,18 +73,23 @@
     background-image: url(../images/icon/ico_arr_left.svg);
 }
 
-.ico-play {
-    @include vw-mo(width, 14);
-    @include vw-mo(height, 14);
-    background-image: url(../images/icon/ico_play.svg);
-}
+// .ico-play {
+//     @include vw-pc(width, 14);
+//     @include vw-pc(height, 14);
+//     background-image: url(../images/icon/ico_play.svg);
+// }
 
-.ico-pause {
-    @include vw-mo(width, 14);
-    @include vw-mo(height, 14);
+// .ico-pause {
+//     @include vw-pc(width, 24);
+//     @include vw-pc(height, 24);
+//     background-image: url(../images/icon/ico_pause.svg);
+// }
+
+.ico-control {
+    @include vw-pc(width, 24);
+    @include vw-pc(height, 24);
     background-image: url(../images/icon/ico_pause.svg);
 }
-
 
 .link-comm {
     display: inline-flex;
@@ -171,12 +176,7 @@
         @include vw-mo(height, 59);
     }
 
-    .ico-play {
-        @include vw-mo(width, 24);
-        @include vw-mo(height, 24);
-    }
-
-    .ico-pause {
+    .ico-control {
         @include vw-mo(width, 24);
         @include vw-mo(height, 24);
     }
