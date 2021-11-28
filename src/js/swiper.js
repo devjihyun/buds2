@@ -76,7 +76,6 @@ var swiper = new Swiper(
     }
 });
 
-
 var swiper = new Swiper(
     '.others-swiper-container', {
 	direction: 'horizontal',
@@ -86,3 +85,25 @@ var swiper = new Swiper(
         slideLabelMessage: null,
     },
 });
+
+
+
+$( ".swiper-pagination-wrap" ).click(function() {
+    $( this ).toggleClass( "pause" );
+    if( $(".ico-control").html() == '슬라이드 재생' ) {
+        $(".ico-control").html('슬라이드 정지');
+    }
+    else {
+        $(".ico-control").html('슬라이드 재생');
+    }
+});
+
+$(".swiper-pagination-wrap").hasClass("pause")(function() {
+    $(this).swiper.autoplay.stop();
+}, function() {
+    $(this).swiper.autoplay.start(); 
+});
+
+
+
+

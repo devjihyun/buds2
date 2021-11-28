@@ -937,7 +937,7 @@
 
         .progress-bar-inner {
             animation-name: swiper-progress;
-            animation-duration: 3s
+            animation-duration: 2.5s
         }
     }
 
@@ -954,6 +954,19 @@
     .page-control-btn {
         margin-left: 10px;
     }
+
+    .pause {
+        .ico-control {
+            background-image: url(../images/icon/ico_play.svg);
+        }
+
+        .swiper-pagination-bullet-active {
+            .progress-bar-inner {
+                animation-play-state: paused;
+            }
+        }
+    
+    } 
 
     .swiper-button-wrap {
         position: absolute;
@@ -1073,7 +1086,7 @@
             &:before {
                 content: '';
                 position: absolute;
-                top: 50%;
+                top: 1vw;
                 left: 0;
                 @include vw-pc(width, 4);
                 @include vw-pc(height, 4);
@@ -1094,6 +1107,10 @@
                 transform: none;
             }
         }
+
+        +.notice-list {
+            @include vw-pc(margin-top, 25);
+        }
     }
 
     .notice-list02 {
@@ -1112,3 +1129,5 @@
         }
     }
 }
+
+
